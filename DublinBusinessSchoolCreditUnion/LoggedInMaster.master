@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LoggedInMaster.master.cs" Inherits="DublinBusinessSchoolCreditUnion.LoggedInMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DBSCU | Home</title>
+    <link href="Content/reset.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="Content/bootstrap.css" />
+    <script src="Content/JavaScript.js"></script>
+    <asp:ContentPlaceHolder ID="head2" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form2" runat="server">
+        <div class="headerimg">
+            <div class="headerrow">
+                <div class="row">
+                    <div class="col-md-9 col-sm-9 col-xs-9" >
+                        <img src="images/Credit-Union-logo.png" />
+                    </div>
+                    <div class="col-md-1 col-sm-1 col-xs-1">
+                        <a href="http://www.facebook.com">
+                            <img src="images/facebook.png" /></a>
+                    </div>
+                    <div class="col-md-1 col-sm-1 col-xs-1">
+                        <a href="http://www.twitter.com">
+                        <img src="images/twitter.png" /></a>
+                    </div>
+                    <div class="col-md-1 col-sm-1 col-xs-1">
+                        <img src="images/email.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="Default.aspx">Home</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="BranchLocator.aspx">Branch Locator</a></li>
+                                    <li><a href="#">What We Offer</a></li>
+                                    <li><a href="Contact.aspx">Contact</a></li>
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="../navbar-static-top/"><asp:Label ID="lblMembersArea" runat="server">Members Area</asp:Label></a></li>
+                                    <li><a href="LoggedIn.aspx"><asp:Label ID="lblMyAccount" runat="server">My Account</asp:Label></a></li>
+                                    <li><a href="Default.aspx"><asp:Label ID="lblLogout" runat="server" OnClick="lblLogout_Click">Logout</asp:Label></a></li>
+                                </ul>
+                            </div>
+                            <!--/.nav-collapse -->
+                        </div>
+                        <!--/.container-fluid -->
+                    </nav>
+                </div>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <div id="footer">
+                <div class="footerrow">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <h4>Opening Hours</h4>
+                            <ul>
+                                <li>Mon: 9.30am - 5.00pm</li>
+                                <li>Tue: 9.30am - 5.00pm</li>
+                                <li>Wed: 9.30am - 5.00pm</li>
+                                <li>Thu: 9.30am - 5.00pm</li>
+                                <li>Fri: 9.30am - 5.00pm</li>
+                                <li>Sat: 11.00am - 3.00pm</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <h4>Contact Us</h4>
+
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <a href="#" class="btn btn-info btn-lg">
+                                      <span class="glyphicon glyphicon-phone-alt"></span> Phone
+                                    </a>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6">
+                                    <a href="#" class="btn btn-info btn-lg">
+                                        <span class="glyphicon glyphicon-envelope"></span> E-Mail 
+                                    </a>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <p id="center">&copy; <%:DateTime.Now.Year %> BIFFO &amp; MikeMaherMedia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4">
+                            <h4>CU Online</h4>
+                            <p>Members of Dublin Business School Student's Credit Union can avail of 24/7 online access to their accounts via our CU online service. To sign up for this service and to find out more about CU online click the link below.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                        </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
