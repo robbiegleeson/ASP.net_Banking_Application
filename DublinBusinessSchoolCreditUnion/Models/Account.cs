@@ -13,7 +13,18 @@ namespace DublinBusinessSchoolCreditUnion.Models
         [Key]
         public int AccountNumber { get; set; }
         public string AccountType { get; set; }
-        public int CustomerID { get; set; }
+        public int SortCode { get; set; }
         public int Balance { get; set; }
+        public int? OverDraftLimit { get; set; }
+        public int CustomerID { get; set; }
+
+        //public string DisplayBalance
+        //{
+        //    get
+        //    {
+        //        double balanceToDisplay = Balance / 100;
+        //        return string.Format("{0:C}", balanceToDisplay);
+        //    }
+        //}
     }
 }
