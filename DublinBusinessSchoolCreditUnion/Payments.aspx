@@ -6,6 +6,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-primary">
+
                 <div class="panel-heading">
                     <h4 class="panel-title">
                         <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Internal Transfer</a>
