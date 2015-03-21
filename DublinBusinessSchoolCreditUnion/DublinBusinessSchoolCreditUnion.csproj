@@ -328,6 +328,7 @@
     <Compile Include="Branches.aspx.designer.cs">
       <DependentUpon>Branches.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CustomSessionObject.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

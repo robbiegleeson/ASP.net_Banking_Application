@@ -23,7 +23,7 @@ namespace DublinBusinessSchoolCreditUnion
             Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
             Response.Cache.SetNoStore();
 
-            if (Session["Username"] == null)
+            if (CustomSessionObject.Current.SessionUsername == null)
             {
                 Response.Redirect("Login.aspx");
             }
@@ -33,7 +33,7 @@ namespace DublinBusinessSchoolCreditUnion
             {
                 DisplaySessionValue();
                 LoadAccountNumber();
-                string username = Session["Username"].ToString();
+                string username = CustomSessionObject.Current.SessionUsername;
 
                 try
                 {
@@ -122,7 +122,7 @@ namespace DublinBusinessSchoolCreditUnion
 
         public void LoadAccountNumber()
         {
-            string username = Session["Username"].ToString();
+            string username = CustomSessionObject.Current.SessionUsername;
 
             var _db = new CustomerContext();
             var query = (from c in _db.Customers
@@ -170,7 +170,7 @@ namespace DublinBusinessSchoolCreditUnion
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             Response.Redirect(Request.RawUrl);
         }
@@ -181,9 +181,9 @@ namespace DublinBusinessSchoolCreditUnion
 
         protected void DisplaySessionValue()
         {
-            if (Session["Username"] != null)
+            if (CustomSessionObject.Current.SessionUsername != null)
             {
-                lblSessionValue.Text = Convert.ToString(Session["Username"]);
+                lblSessionValue.Text = CustomSessionObject.Current.SessionUsername;
             }
         }
 
