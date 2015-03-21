@@ -71,3 +71,9 @@ C:\Users\10182914\Desktop\database_and_web_application\DublinBusinessSchoolCredi
 C:\Users\10182914\Desktop\database_and_web_application\DublinBusinessSchoolCreditUnion\obj\Debug\DublinBusinessSchoolCreditUnion.dll
 C:\Users\10182914\Desktop\database_and_web_application\DublinBusinessSchoolCreditUnion\obj\Debug\DublinBusinessSchoolCreditUnion.pdb
 C:\Users\10182914\Desktop\database_and_web_application\DublinBusinessSchoolCreditUnion\obj\Debug\DublinBusinessSchoolCreditUnion.csprojResolveAssemblyReference.cache
+C:\Users\Lorna\Desktop\DublinBusinessSchoolCreditUnion\DublinBusinessSchoolCreditUnion\bin\DoddleReport.dll
+C:\Users\Lorna\Desktop\DublinBusinessSchoolCreditUnion\DublinBusinessSchoolCreditUnion\bin\DoddleReport.Web.dll
+C:\Users\Lorna\Desktop\DublinBusinessSchoolCreditUnion\DublinBusinessSchoolCreditUnion\bin\DoddleReport.pdb
+C:\Users\Lorna\Desktop\DublinBusinessSchoolCreditUnion\DublinBusinessSchoolCreditUnion\bin\DoddleReport.Web.pdb
+C:\Users\Lorna\Desktop\DublinBusinessSchoolCreditUnion\DublinBusinessSchoolCreditUnion\bin\itextsharp.dll
+C:\Users\Lorna\Desktop\DublinBusinessSchoolCreditUnion\DublinBusinessSchoolCreditUnion\bin\itextsharp.xml

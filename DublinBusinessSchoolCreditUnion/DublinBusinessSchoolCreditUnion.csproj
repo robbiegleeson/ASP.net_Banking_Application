@@ -39,6 +39,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DoddleReport">
+      <HintPath>..\packages\DoddleReport.Web.1.4\lib\net40\DoddleReport.dll</HintPath>
+    </Reference>
+    <Reference Include="DoddleReport.Web">
+      <HintPath>..\packages\DoddleReport.Web.1.4\lib\net40\DoddleReport.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.5\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -196,6 +205,7 @@
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\car-loans-new.jpg" />
+    <Content Include="Images\carLoan.jpg" />
     <Content Include="Images\CC_blue_sky.jpg" />
     <Content Include="Images\Credit-Union-logo-dbs.png" />
     <Content Include="Images\Credit-Union-logo-PMS-jpg.png" />
@@ -205,6 +215,9 @@
     <Content Include="Images\facebook.png" />
     <Content Include="Images\FacebookIcon.png" />
     <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\HolidayLoan.jpg" />
+    <Content Include="Images\holidayloans kids.jpg" />
+    <Content Include="Images\HomeLoan.PNG" />
     <Content Include="Images\iconmonstr-facebook-5-icon-256.png" />
     <Content Include="Images\lock.png" />
     <Content Include="Images\orderedList0.png" />
