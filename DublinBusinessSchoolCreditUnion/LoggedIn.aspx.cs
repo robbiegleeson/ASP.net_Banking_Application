@@ -5,6 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
+
+
 
 namespace DublinBusinessSchoolCreditUnion
 {
@@ -12,6 +15,8 @@ namespace DublinBusinessSchoolCreditUnion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+
             Response.Cache.SetCacheability(HttpCacheability.NoCache);
             Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
             Response.Cache.SetNoStore();
@@ -177,6 +182,20 @@ namespace DublinBusinessSchoolCreditUnion
             {
                 lblSessionValue.Text = CustomSessionObject.Current.SessionUsername;
             }
+        }
+
+        public static List<Transaction> GetTransactions()
+        {
+            var _db = new CustomerContext();
+
+            var query = (from t in _db.Transactions
+                         join a in _db.Accounts on t.TransactionAccountNumber equals a.AccountNumber
+                         join c in _db.Customers on a.CustomerID equals c.CustomerID
+                         where c.CustomerID == a.CustomerID
+                         select t).ToList();
+
+            return query.ToList();
+
         }
     }
 }

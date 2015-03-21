@@ -46,7 +46,7 @@
                                 <ul class="nav navbar-nav">
                                     <li><a href="Default.aspx">Home</a></li>
                                     <li><a href="#">About</a></li>
-                                    <li><a href="BranchLocator.aspx">Branch Locator</a></li>
+                                    <li><a href="Branches.aspx">Branch Locator</a></li>
                                     <li><a href="#">What We Offer</a></li>
                                     <li><a href="Contact.aspx">Contact</a></li>
                                 </ul>

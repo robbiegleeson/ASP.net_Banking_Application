@@ -197,6 +197,7 @@
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\car-loans-new.jpg" />
+    <Content Include="Images\carLoan.jpg" />
     <Content Include="Images\CC_blue_sky.jpg" />
     <Content Include="Images\Credit-Union-logo-dbs.png" />
     <Content Include="Images\Credit-Union-logo-PMS-jpg.png" />
@@ -206,6 +207,9 @@
     <Content Include="Images\facebook.png" />
     <Content Include="Images\FacebookIcon.png" />
     <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\HolidayLoan.jpg" />
+    <Content Include="Images\holidayloans kids.jpg" />
+    <Content Include="Images\HomeLoan.PNG" />
     <Content Include="Images\iconmonstr-facebook-5-icon-256.png" />
     <Content Include="Images\lock.png" />
     <Content Include="Images\orderedList0.png" />
@@ -229,6 +233,7 @@
     <Content Include="Images\Thumbs.db" />
     <Content Include="LoggedInMaster.master" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Payments.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Scripts\branchmap.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -367,6 +372,13 @@
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomerContext.cs" />
     <Compile Include="Models\Transaction.cs" />
+    <Compile Include="Payments.aspx.cs">
+      <DependentUpon>Payments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Payments.aspx.designer.cs">
+      <DependentUpon>Payments.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
