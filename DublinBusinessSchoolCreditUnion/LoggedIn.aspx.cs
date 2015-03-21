@@ -122,7 +122,6 @@ namespace DublinBusinessSchoolCreditUnion
                          join a in _db.Accounts on c.CustomerID equals a.CustomerID
                          where c.UserName == username
                          select new { a.AccountNumber }).FirstOrDefault();
-
             txtFromAccount.Text = query.AccountNumber.ToString();
         }
 

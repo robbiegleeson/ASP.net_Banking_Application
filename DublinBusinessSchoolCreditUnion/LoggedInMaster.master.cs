@@ -11,7 +11,8 @@ namespace DublinBusinessSchoolCreditUnion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            liAdmin.Visible = true;//CustomSessionObject.Current.IsAdmin;
+               
         }
     }
 }

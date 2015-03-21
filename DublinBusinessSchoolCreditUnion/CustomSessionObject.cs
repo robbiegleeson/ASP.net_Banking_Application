@@ -15,6 +15,7 @@ namespace DublinBusinessSchoolCreditUnion
         private CustomSessionObject()
         {
             LoginStatus = false;
+            IsAdmin = false;
         }
 
         public static CustomSessionObject Current

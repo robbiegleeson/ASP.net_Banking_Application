@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoggedInMaster.master" AutoEventWireup="true" CodeBehind="LoggedIn.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.LoggedIn" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head2" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
         <div class="col-md-3">
             <div class="panel-group" id="accordion">

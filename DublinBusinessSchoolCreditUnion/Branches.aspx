@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="Find Us" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="Branches.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.Branches" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="Scripts/branchmap.js"></script>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
         <div class="col-md-6">
             <div class="panel panel-primary">

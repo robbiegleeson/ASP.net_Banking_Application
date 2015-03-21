@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="Content/bootstrap.css" />
     <script src="Content/JavaScript.js"></script>
-    <asp:ContentPlaceHolder ID="head2" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form2" runat="server">
+    <form id="form1" runat="server">
         <div class="headerimg">
             <div class="headerrow">
                 <div class="row">
@@ -52,6 +52,7 @@
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
                                     <li><a href="../navbar-static-top/"><asp:Label ID="lblMembersArea" runat="server">Members Area</asp:Label></a></li>
+                                    <li runat="server" id="liAdmin"><a href="Admin.aspx"><asp:Label ID="lblAdmin" runat="server" Visible="false">Control Panel</asp:Label></a></li>
                                     <li><a href="LoggedIn.aspx"><asp:Label ID="lblMyAccount" runat="server">My Account</asp:Label></a></li>
                                     <li><a href="Default.aspx"><asp:Label ID="lblLogout" runat="server" OnClick="lblLogout_Click">Logout</asp:Label></a></li>
                                 </ul>
@@ -62,7 +63,7 @@
                     </nav>
                 </div>
             </div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
 
             <div id="footer">
