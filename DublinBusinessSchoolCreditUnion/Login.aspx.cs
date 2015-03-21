@@ -25,7 +25,7 @@ namespace DublinBusinessSchoolCreditUnion
             {
                 if (cust.UserName == txtUsername.Text && cust.CustomerPassword == txtPassword.Text)
                 {
-                    Session["Username"] = txtUsername.Text.Trim();
+                    CustomSessionObject.Current.SessionUsername = txtUsername.Text.Trim();
                     Server.Transfer("LoggedIn.aspx?txtUsername=" + txtUsername.Text);
                 }
                 else
