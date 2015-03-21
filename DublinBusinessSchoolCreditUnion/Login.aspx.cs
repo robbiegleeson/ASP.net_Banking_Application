@@ -17,21 +17,29 @@ namespace DublinBusinessSchoolCreditUnion
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             var _db = new CustomerContext();
-            var query = (from c in _db.Customers
+            Customer currentCustomer = (from c in _db.Customers
                          where c.UserName == txtUsername.Text && c.CustomerPassword == txtPassword.Text
-                         select c);
+                         select c).First();
 
-            foreach (Customer cust in query)
+            if (currentCustomer.UserName == txtUsername.Text && currentCustomer.CustomerPassword == txtPassword.Text)
             {
-                if (cust.UserName == txtUsername.Text && cust.CustomerPassword == txtPassword.Text)
+                CustomSessionObject.Current.SessionUsername = txtUsername.Text.Trim();
+                CustomSessionObject.Current.LoginStatus = true;
+
+                if (currentCustomer.UserName.Equals("admin"))
                 {
-                    CustomSessionObject.Current.SessionUsername = txtUsername.Text.Trim();
-                    Server.Transfer("LoggedIn.aspx?txtUsername=" + txtUsername.Text);
+                    CustomSessionObject.Current.IsAdmin = true;
+                    Server.Transfer("Admin.aspx");
                 }
                 else
-                {
-                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Unsuccessful')", true);
-                }
+                    Server.Transfer("LoggedIn.aspx?txtUsername=" + CustomSessionObject.Current.SessionUsername);
+
+                
+            }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Unsuccessful')", true);
+                CustomSessionObject.Current.LoginStatus = false;
             }
         }
     }

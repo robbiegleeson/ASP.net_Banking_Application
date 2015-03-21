@@ -15,13 +15,12 @@ namespace DublinBusinessSchoolCreditUnion
 
         }
 
-        protected void Page_OnPreInit(object sender, EventArgs e)
+        protected void Page_PreInit(object sender, EventArgs e)
         {
-            base.OnPreInit(e);
             if (CustomSessionObject.Current.LoginStatus)
-                this.MasterPageFile = "LoggedInMaster.Master";
+                this.MasterPageFile = "LoggedInMaster.master";
             else
-                this.MasterPageFile = "Main.Master";
+                this.MasterPageFile = "Main.master";
         }
 
         public IQueryable<Branch> GetBranches()

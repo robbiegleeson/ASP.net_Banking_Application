@@ -5,8 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DoddleReport;
-using DoddleReport.Writers;
 using System.IO;
 
 
@@ -129,7 +127,6 @@ namespace DublinBusinessSchoolCreditUnion
                          join a in _db.Accounts on c.CustomerID equals a.CustomerID
                          where c.UserName == username
                          select new { a.AccountNumber }).FirstOrDefault();
-
             txtFromAccount.Text = query.AccountNumber.ToString();
         }
 
@@ -185,18 +182,6 @@ namespace DublinBusinessSchoolCreditUnion
             {
                 lblSessionValue.Text = CustomSessionObject.Current.SessionUsername;
             }
-        }
-
-        protected void lblMarchStatement_Click(object sender, EventArgs e)
-        {
-
-            var query = LoggedIn.GetTransactions();
-
-            var report = new Report(query.ToReportSource());
-
-            var writer = new HtmlReportWriter();
-
-            writer.WriteReport(report, Response.OutputStream);
         }
 
         public static List<Transaction> GetTransactions()
