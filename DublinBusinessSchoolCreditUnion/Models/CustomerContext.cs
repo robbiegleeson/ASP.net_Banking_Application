@@ -9,11 +9,7 @@ namespace DublinBusinessSchoolCreditUnion.Models
     public class CustomerContext : DbContext
     {
         public CustomerContext()
-<<<<<<< HEAD
             : base("DBSCU_Rob_Home")
-=======
-            : base("mikeHome")
->>>>>>> 170ebfb86ef32f17aa755ef029c74b6a90452507
         {
 
         }

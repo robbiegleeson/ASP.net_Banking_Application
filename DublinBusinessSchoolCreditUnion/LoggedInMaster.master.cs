@@ -18,5 +18,13 @@ namespace DublinBusinessSchoolCreditUnion
         {
             Session.Remove("Username");
         }
+
+        protected void lblMyAccount_Click(object sender, EventArgs e)
+        {
+            if (CustomSessionObject.Current.SessionUsername == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+        }
     }
 }
