@@ -34,3 +34,4 @@ C:\Users\miket_000\Desktop\database_and_web_application\DublinBusinessSchoolCred
 C:\Users\miket_000\Desktop\database_and_web_application\DublinBusinessSchoolCreditUnion\bin\Microsoft.AspNet.FriendlyUrls.xml
 C:\Users\miket_000\Desktop\database_and_web_application\DublinBusinessSchoolCreditUnion\obj\Debug\DublinBusinessSchoolCreditUnion.dll
 C:\Users\miket_000\Desktop\database_and_web_application\DublinBusinessSchoolCreditUnion\obj\Debug\DublinBusinessSchoolCreditUnion.pdb
+C:\Users\miket_000\Desktop\database_and_web_application\DublinBusinessSchoolCreditUnion\obj\Debug\DublinBusinessSchoolCreditUnion.csprojResolveAssemblyReference.cache
