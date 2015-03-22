@@ -52,12 +52,8 @@
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
                                     <li><a href="../navbar-static-top/"><asp:Label ID="lblMembersArea" runat="server">Members Area</asp:Label></a></li>
-<<<<<<< HEAD
                                     <li><a href="LoggedIn.aspx"><asp:Label ID="lblMyAccount" runat="server" onClick="lblMyAccount_Click">My Account</asp:Label></a></li>
-=======
                                     <li runat="server" id="liAdmin"><a href="Admin.aspx"><asp:Label ID="lblAdmin" runat="server" Visible="false">Control Panel</asp:Label></a></li>
-                                    <li><a href="LoggedIn.aspx"><asp:Label ID="lblMyAccount" runat="server">My Account</asp:Label></a></li>
->>>>>>> 4f91ba4643b0d4d42418b55aed7e2f377bac2d12
                                     <li><a href="Default.aspx"><asp:Label ID="lblLogout" runat="server" OnClick="lblLogout_Click">Logout</asp:Label></a></li>
                                 </ul>
                             </div>

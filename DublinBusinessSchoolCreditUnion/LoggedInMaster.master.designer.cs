@@ -40,6 +40,15 @@ namespace DublinBusinessSchoolCreditUnion {
         protected global::System.Web.UI.WebControls.Label lblMembersArea;
         
         /// <summary>
+        /// lblMyAccount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMyAccount;
+        
+        /// <summary>
         /// liAdmin control.
         /// </summary>
         /// <remarks>
@@ -56,15 +65,6 @@ namespace DublinBusinessSchoolCreditUnion {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAdmin;
-        
-        /// <summary>
-        /// lblMyAccount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMyAccount;
         
         /// <summary>
         /// lblLogout control.
