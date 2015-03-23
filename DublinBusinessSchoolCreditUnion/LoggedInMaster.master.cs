@@ -17,7 +17,7 @@ namespace DublinBusinessSchoolCreditUnion
 
         protected void lblLogout_Click(object sender, EventArgs e)
         {
-            CustomSessionObject.Current.SessionUsername = null;
+            Session.Remove("Username");
             Server.Transfer("Default.aspx");
         }
     }
