@@ -234,6 +234,7 @@
     <Content Include="Images\sky.jpeg" />
     <Content Include="Images\twitter.png" />
     <Content Include="Images\TwitterIcon.png" />
+    <Content Include="LoanCalculator.aspx" />
     <Content Include="LoggedIn.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
@@ -361,6 +362,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LoanCalculator.aspx.cs">
+      <DependentUpon>LoanCalculator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanCalculator.aspx.designer.cs">
+      <DependentUpon>LoanCalculator.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoggedIn.aspx.cs">
       <DependentUpon>LoggedIn.aspx</DependentUpon>
