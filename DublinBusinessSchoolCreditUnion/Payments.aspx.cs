@@ -81,7 +81,7 @@ namespace DublinBusinessSchoolCreditUnion
                 query.Balance = newBalance;
                 db.SaveChanges();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;

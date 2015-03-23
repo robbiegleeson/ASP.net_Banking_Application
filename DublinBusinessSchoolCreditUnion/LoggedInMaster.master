@@ -45,15 +45,15 @@
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav">
                                     <li><a href="Default.aspx">Home</a></li>
-                                    <li><a href="#">About</a></li>
+                                    <li><a href="About.aspx">About</a></li>
                                     <li><a href="Branches.aspx">Branch Locator</a></li>
                                     <li><a href="#">What We Offer</a></li>
                                     <li><a href="Contact.aspx">Contact</a></li>
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
                                     <li><a href="../navbar-static-top/"><asp:Label ID="lblMembersArea" runat="server">Members Area</asp:Label></a></li>
+                                    <li><a href="LoggedIn.aspx"><asp:Label ID="lblMyAccount" runat="server" onClick="lblMyAccount_Click">My Account</asp:Label></a></li>
                                     <li runat="server" id="liAdmin"><a href="Admin.aspx"><asp:Label ID="lblAdmin" runat="server" Visible="false">Control Panel</asp:Label></a></li>
-                                    <li><a href="LoggedIn.aspx"><asp:Label ID="lblMyAccount" runat="server">My Account</asp:Label></a></li>
                                     <li><a href="Default.aspx"><asp:Label ID="lblLogout" runat="server" OnClick="lblLogout_Click">Logout</asp:Label></a></li>
                                 </ul>
                             </div>

@@ -14,5 +14,13 @@ namespace DublinBusinessSchoolCreditUnion
             liAdmin.Visible = CustomSessionObject.Current.IsAdmin;
                
         }
+
+        protected void lblLogout_Click(object sender, EventArgs e)
+        {
+            CustomSessionObject.Current.SessionUsername = null;
+            CustomSessionObject.Current.LoginStatus = false;
+            CustomSessionObject.Current.IsAdmin = false;
+            Server.Transfer("Default.aspx");
+        }
     }
 }

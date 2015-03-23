@@ -42,7 +42,7 @@
                         <div class="panel-body">
                             <ul>
                                 <li>
-                                    <asp:LinkButton ID="lblInternalTransfer" runat="server" Text="Make Payment" OnClick="lblInternalTransfer_Click"></asp:LinkButton></li
+                                    <asp:LinkButton ID="lblInternalTransfer" runat="server" Text="Make Payment" OnClick="lblInternalTransfer_Click"></asp:LinkButton></li>
                                 <li>
                                     <asp:Label ID="lblSessionValue" runat="server"></asp:Label></li>
                             </ul>
@@ -80,24 +80,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">View Statements</a>
-                        </h4>
-                    </div>
-                    <div id="collapse4" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <ul>
-                                <li>
-                                   <asp:LinkButton ID="lblMarchStatement" runat="server" OnClick="lblMarchStatement_Click">March 2015</asp:LinkButton>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
 
