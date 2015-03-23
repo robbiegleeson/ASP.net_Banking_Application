@@ -39,10 +39,10 @@
                                     <asp:DropDownList ID="ddlLengthOfLoan" runat="server" Width="245px">
                                         <asp:ListItem Enabled="true" Text="Select Length of Loan" Value="-1"></asp:ListItem>
                                         <asp:ListItem Text="1 Year" Value="1"></asp:ListItem>
-                                        <asp:ListItem Text="2 Years" Value="1"></asp:ListItem>
-                                        <asp:ListItem Text="3 Years" Value="1"></asp:ListItem>
-                                        <asp:ListItem Text="4 Years" Value="1"></asp:ListItem>
-                                        <asp:ListItem Text="5 Years" Value="1"></asp:ListItem>
+                                        <asp:ListItem Text="2 Years" Value="2"></asp:ListItem>
+                                        <asp:ListItem Text="3 Years" Value="3"></asp:ListItem>
+                                        <asp:ListItem Text="4 Years" Value="4"></asp:ListItem>
+                                        <asp:ListItem Text="5 Years" Value="5"></asp:ListItem>
                                     </asp:DropDownList></li>
                             </ul>
                         </div>
