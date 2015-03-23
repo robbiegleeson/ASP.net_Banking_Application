@@ -8,7 +8,9 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">Loan Calculator</div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Amount to Borrow</div>
                         <div class="panel-body">
                             <ul class="LoanCalculator">
                                 <li>
@@ -46,20 +48,31 @@
                                     </asp:DropDownList></li>
                             </ul>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                                <div class="panel-body">
-                                    <ul class="LoanCalculator">
-                                        <li><asp:Label ID="lblRepaymentAmount" runat="server">Amount of Each Repayment:</asp:Label></li>
-                                        <li><asp:TextBox ID="txtRepaymentAmount" runat="server" Enabled="false" Width="245px"></asp:TextBox></li>
-                                        <li><asp:Label ID="lblTotalRepayment" runat="server">Amount of Total Repayment:</asp:Label></li>
-                                        <li><asp:TextBox ID="txtTotalRepayentAmount" runat="server" Enabled="false" Width="245"></asp:TextBox></li>
-                                        <li><asp:Label ID="lblTotalInterest" runat="server">Amount of Total Interest:</asp:Label></li>
-                                        <li><asp:TextBox ID="txtTotalInterest" runat="server" Enabled="false" Width="245"></asp:TextBox></li>
-                                        <li><asp:Button ID="btnCalculate" runat="server" Text="Calculate" OnClick="btnCalculate_Click" /></li>
-                                    </ul>
-                                </div>
                             </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">Repayments</div>
+                        <div class="panel-body">
+                            <ul class="LoanCalculator">
+                                <li>
+                                    <asp:Label ID="lblRepaymentAmount" runat="server">Amount of Each Repayment:</asp:Label></li>
+                                <li>
+                                    <asp:TextBox ID="txtRepaymentAmount" runat="server" Enabled="false" Width="245px"></asp:TextBox></li>
+                                <li>
+                                    <asp:Label ID="lblTotalRepayment" runat="server">Amount of Total Repayment:</asp:Label></li>
+                                <li>
+                                    <asp:TextBox ID="txtTotalRepayentAmount" runat="server" Enabled="false" Width="245"></asp:TextBox></li>
+                                <li>
+                                    <asp:Label ID="lblTotalInterest" runat="server">Amount of Total Interest:</asp:Label></li>
+                                <li>
+                                    <asp:TextBox ID="txtTotalInterest" runat="server" Enabled="false" Width="245"></asp:TextBox></li>
+                                <li>
+                                    <asp:Button ID="btnCalculate" runat="server" Text="Calculate" OnClick="btnCalculate_Click" /></li>
+                            </ul>
+                        </div>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
