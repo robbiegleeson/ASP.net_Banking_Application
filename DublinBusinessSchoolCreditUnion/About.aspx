@@ -16,8 +16,7 @@
             <div class="panel panel-primary">
                 <div class="panel-heading">How To Join</div>
                 <div class="panel-body">
-                    When applying for membership you will be asked for proof of ID, a valid student card and proof of address, for example a current passport and recent utility bill. Each share
-                    you hold in your credit union is equal to €1/£1stg. Depending on the rules of your credit union, to be a member there will be an entrance fee of not more than €1.27/£1stg and you will need to hold a minimum savings of between one and ten shares.
+                    When applying for membership you will be asked for proof of ID, a valid student card and proof of address Each share you hold in your credit union is equal to €1/£1stg. Depending on the rules of your credit union, to be a member there will be an entrance fee of not more than €1.27/£1stg and you will need to hold a minimum savings of between one and ten shares.
                 </div>
             </div>
         </div>
