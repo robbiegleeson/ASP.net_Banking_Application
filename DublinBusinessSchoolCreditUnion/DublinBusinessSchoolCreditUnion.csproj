@@ -378,6 +378,7 @@
     </Compile>
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Branch.cs" />
+    <Compile Include="Models\Counties.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\CustomerContext.cs" />
     <Compile Include="Models\Transaction.cs" />
