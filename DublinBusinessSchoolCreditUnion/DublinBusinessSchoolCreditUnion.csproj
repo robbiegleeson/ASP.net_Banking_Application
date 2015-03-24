@@ -192,6 +192,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="ErrorPage.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\car-loans-new.jpg" />
@@ -201,6 +202,7 @@
     <Content Include="Images\Credit-Union-logo-PMS-jpg.png" />
     <Content Include="Images\Credit-Union-logo.png" />
     <Content Include="Images\DBS-logo-fit.png" />
+    <Content Include="Images\DublinBSLOGO.png" />
     <Content Include="Images\email.png" />
     <Content Include="Images\facebook.png" />
     <Content Include="Images\FacebookIcon.png" />
@@ -211,6 +213,7 @@
     <Content Include="Images\HomeLoan.PNG" />
     <Content Include="Images\iconmonstr-facebook-5-icon-256.png" />
     <Content Include="Images\lock.png" />
+    <Content Include="Images\NewLogoxcf.png" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
     <Content Include="Images\orderedList2.png" />
@@ -322,6 +325,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

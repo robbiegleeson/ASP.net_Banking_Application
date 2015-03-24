@@ -6796,7 +6796,7 @@ td.visible-print {
 
 /********************************************************************************/
 .headerrow img {
-width:150px;
+width:250px;
 height:105px;
 padding: 5px;
 }   
@@ -7036,7 +7036,11 @@ body {
 
 .ticker {
     margin-bottom: 20px;
-    	-webkit-box-shadow: 0 8px 6px -6px black;
+    -webkit-box-shadow: 0 8px 6px -6px black;
 	   -moz-box-shadow: 0 8px 6px -6px black;
 	        box-shadow: 0 8px 6px -6px black;
+}
+
+#rssDiv {
+    height: 425px;
 }

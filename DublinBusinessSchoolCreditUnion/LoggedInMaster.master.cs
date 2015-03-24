@@ -17,10 +17,17 @@ namespace DublinBusinessSchoolCreditUnion
             {
                 lblMyAccount.Visible = false;
             }
-               
+
+            liAdmin.Visible = CustomSessionObject.Current.IsAdmin;
+
         }
 
         protected void lblLogout_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void LOGOUT_Click(object sender, EventArgs e)
         {
             CustomSessionObject.Current.SessionUsername = null;
             CustomSessionObject.Current.LoginStatus = false;

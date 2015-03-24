@@ -52,10 +52,14 @@
                                     <li><a href="Contact.aspx">Contact</a></li>
                                 </ul>
                                 <ul class="nav navbar-nav navbar-right">
-                                    <li><a href="../navbar-static-top/"><asp:Label ID="lblMembersArea" runat="server">Members Area</asp:Label></a></li>
-                                    <li><a href="LoggedIn.aspx"><asp:Label ID="lblMyAccount" runat="server" onClick="lblMyAccount_Click">My Account</asp:Label></a></li>
-                                    <li runat="server" id="liAdmin"><a href="Admin.aspx"><asp:Label ID="lblAdmin" runat="server" Visible="false">Control Panel</asp:Label></a></li>
-                                    <li><a href="Default.aspx"><asp:Label ID="lblLogout" runat="server" OnClick="lblLogout_Click">Logout</asp:Label></a></li>
+                                    <li>
+                                        <a href="../navbar-static-top/"><asp:Label ID="lblMembersArea" runat="server">Members Area</asp:Label></a></li>
+                                    <li>
+                                        <a href="LoggedIn.aspx"><asp:Label ID="lblMyAccount" runat="server" onClick="lblMyAccount_Click">My Account</asp:Label></a></li>
+                                    <li runat="server" id="liAdmin">
+                                        <a href="Admin.aspx"><asp:Label ID="lblAdmin" runat="server" Visible="false">Control Panel</asp:Label></a></li>
+                                    <li>
+                                        <asp:LinkButton ID="LOGOUT" runat="server" OnClick="LOGOUT_Click">Logout</asp:LinkButton></li>
                                 </ul>
                             </div>
                             <!--/.nav-collapse -->
