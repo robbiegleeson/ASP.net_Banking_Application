@@ -15,6 +15,10 @@ namespace DublinBusinessSchoolCreditUnion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!CustomSessionObject.Current.IsAdmin)
+            {
+                Response.Redirect("ErrorPage.aspx", true);
+            }
             if (!IsPostBack)
             {
                 ClearCustomerDropdowns();
@@ -185,28 +189,11 @@ namespace DublinBusinessSchoolCreditUnion
         }
 
         protected void btnExportXML_Click(object sender, EventArgs e)
-        {
+        {   //add tryCatch or using
             string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + Path.DirectorySeparatorChar + "Customer" + Guid.NewGuid() + ".xml";
-            string fileName = Path.GetFileName(filePath);
-            Stream stream = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
-            long bytesToRead = stream.Length;
-            Response.ContentType = "application/octet-stream";
-            Response.AddHeader("Content-Disposition", "attachment; fileName" + fileName);
-
-            while (bytesToRead > 0)
-            {
-                if (Response.IsClientConnected)
-                {
-                    byte[] buffer = new Byte[10000];
-                    int length = stream.Read(buffer, 0, 10000);
-                    Response.OutputStream.Write(buffer, 0, length);
-                    Response.Flush();
-                    bytesToRead = bytesToRead - 1;
-                }
-                else
-                    bytesToRead = -1;
-            }
-
+            StreamWriter writer = new StreamWriter(filePath);
+            SerializeCustomerInfo(writer);
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Customer info saved to MyDocuments!')", true);
         }
 
         protected void btnSaveXML_Click(object sender, EventArgs e)
@@ -214,6 +201,7 @@ namespace DublinBusinessSchoolCreditUnion
             string filePath = "~/XMLfiles/" + Guid.NewGuid() + ".xml";
             StreamWriter writer = new StreamWriter(Server.MapPath(filePath));
             SerializeCustomerInfo(writer);
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Customer info saved to server!')", true);
         }
 
         private void SerializeCustomerInfo(StreamWriter writer)
