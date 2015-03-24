@@ -12,7 +12,6 @@ namespace DublinBusinessSchoolCreditUnion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //clear lists on load doesnt work right look at !IsPostBack instead
             if (!IsPostBack)
             {
                 ClearCustomerDropdowns();
@@ -27,6 +26,8 @@ namespace DublinBusinessSchoolCreditUnion
                     ListItem county = new ListItem(countyNames.GetValue(i).ToString());
                     cboCounties.Items.Add(county);
                 }
+
+                cboAccounts.Visible = false;
             }
         }
 
@@ -161,12 +162,14 @@ namespace DublinBusinessSchoolCreditUnion
 
             cxt.Accounts.Remove(cxt.Accounts.Where(a => a.AccountNumber == accountNumber).First());
             cxt.SaveChanges();
+            cboAccounts.Visible = false;
         }
 
-        protected void cboCustomerDetails_SelectedIndexChanged(object sender, EventArgs e)
+        protected void btnLoadAccounts_Click(object sender, EventArgs e)
         {
             cboAccounts.Items.Clear();
             PrimeAccountDropDown();
+            cboAccounts.Visible = true;
         }
     }
 }

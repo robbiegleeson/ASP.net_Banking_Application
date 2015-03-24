@@ -6969,3 +6969,7 @@ body {
 .LoanCalculator li{
     padding: 2px;
 }
+
+.adminLists li {
+    padding: 5px;
+}

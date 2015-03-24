@@ -16,7 +16,7 @@
                     </div><!--/panel-heading-->
                     <div id="collapse1" class="panel-collapse collapse">
                         <div class="panel-body">
-                            <ul>
+                            <ul class="adminLists">
                                 <li><asp:Label ID="lblFname" runat="server">First Name</asp:Label></li>
                                 <li><asp:TextBox ID="txtFname" runat="server"></asp:TextBox></li>
                                 <li><asp:Label ID="lblLname" runat="server">Last Name</asp:Label></li>
@@ -48,7 +48,7 @@
                     </div><!--/panel-heading-->
                     <div id="collapse2" class="panel panel-collapse">
                         <div class="panel-body">
-                            <ul>
+                            <ul class="adminLists">
                                 <li><asp:DropDownList ID="cboCustomers" runat="server"></asp:DropDownList></li>
                                 <li><asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" /></li>
                             </ul>
@@ -66,7 +66,7 @@
                     </div><!--/panel-heading-->
                     <div id="collapse3" class="panel panel-collapse">
                         <div class="panel-body">
-                            <ul>
+                            <ul class="adminLists">
                                 <li><asp:DropDownList ID="cboViewCustomers" runat="server"></asp:DropDownList></li>
                                 <li><asp:Button ID="btnView" runat="server" Text="View Details" OnClick="btnView_Click" /></li>
                                 <li><asp:Label ID="lblDisplayFname" runat="server"></asp:Label></li>
@@ -90,8 +90,9 @@
                     </div><!--/panel-heading-->
                     <div id="collapse4" class="panel panel-collapse">
                         <div class="panel-body">
-                            <ul>
-                                <li><asp:DropDownList ID="cboCustomerDetails" runat="server" OnSelectedIndexChanged="cboCustomerDetails_SelectedIndexChanged"></asp:DropDownList></li>
+                            <ul class="adminLists">
+                                <li><asp:DropDownList ID="cboCustomerDetails" runat="server"></asp:DropDownList></li>
+                                <li><asp:Button ID="btnLoadAccounts" runat="server" OnClick="btnLoadAccounts_Click" Text="Load Accounts" /></li>
                                 <li><asp:DropDownList ID="cboAccounts" runat="server"></asp:DropDownList></li>
                                 <li><asp:Button ID="btnCloseAccount" runat="server" Text="Close Account" OnClick="btnCloseAccount_Click" /></li>
                             </ul>
@@ -104,7 +105,7 @@
             <!--right aside-->
         </div><!--/col-md-2-->
         <div class="row">
-
-        </div>
+            <p></p>
+        </div><!--/row-->
     </div>
 </asp:Content>
