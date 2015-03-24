@@ -1,17 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.Login" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="AdminLogin.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.AdminLogin" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <section>
+     <section>
         <article>
             <div class="row">
                 <div class="col-md-3">
                 </div>
                 <div class="col-md-6">
                     <div class="panel panel-primary">
-                        <div class="panel-heading">LOGIN</div>
+                        <div class="panel-heading">ADMIN LOGIN</div>
                         <div class="panel-body">
                             <ul>
                                 <li>
@@ -24,8 +22,6 @@
                                     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox></li>
                                 <li>
                                     <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" /></li>
-                                <li><asp:Label ID="lblNotRegistered" runat="server">Not Registered? Get Going <a href="Register.aspx">Here</a></asp:Label></li>
-                                <li><asp:Label ID="lblAdminLogin" runat="server">Admin Users Login <a href="AdminLogin.aspx">Here</a></asp:Label></li>
                             </ul>
                         </div>
                     </div>

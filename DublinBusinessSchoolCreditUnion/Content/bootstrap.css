@@ -6973,3 +6973,7 @@ body {
 .adminLists li, #adminBottomStrip {
     padding: 5px;
 }
+
+.ticker col-md-12{
+    margin-bottom: 20px;
+}

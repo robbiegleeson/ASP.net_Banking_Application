@@ -202,5 +202,10 @@ namespace DublinBusinessSchoolCreditUnion
             string currencyFormat = string.Format("{0:C}", convertedValue);
             return currencyFormat;
         }
+
+        protected void lblLoanCalculator_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("LoanCalculator.aspx", true);
+        }
     }
 }

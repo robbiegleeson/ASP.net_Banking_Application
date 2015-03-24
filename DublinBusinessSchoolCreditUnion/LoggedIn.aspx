@@ -80,6 +80,20 @@
                         </div>
                     </div>
                 </div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Loan Calculator</a>
+                        </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul>
+                                <li><asp:LinkButton ID="lblLoanCalculator" runat="server" Text="Loan Calculator" OnClick="lblLoanCalculator_Click"></asp:LinkButton></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

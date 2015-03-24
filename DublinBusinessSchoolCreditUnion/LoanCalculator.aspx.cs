@@ -29,47 +29,104 @@ namespace DublinBusinessSchoolCreditUnion
                 {
                     case "1":
                         totalInterest = (amountBorrowed * 6.7 / 100) * 365/ 100;
-                        eachRepayment = totalInterest / 65;
+                        eachRepayment = totalInterest / 52;
                         totalRepayment = amountBorrowed + totalInterest;
 
                         txtTotalInterest.Text = totalInterest.ToString();
-                        txtRepaymentAmount.Text = string.Format("{0:C}", eachRepayment.ToString());
+                        txtRepaymentAmount.Text = string.Format("{0}", eachRepayment.ToString());
                         txtTotalRepayentAmount.Text = totalRepayment.ToString();
                         break;
 
                     case "2":
                         totalInterest = (amountBorrowed * 6.7 / 100) * 730/ 100;
-                        eachRepayment = totalInterest / 65;
+                        eachRepayment = totalInterest / 52;
                         totalRepayment = amountBorrowed + totalInterest;
 
                         txtTotalInterest.Text = totalInterest.ToString();
-                        txtRepaymentAmount.Text = string.Format("{0:C}", eachRepayment.ToString());
+                        txtRepaymentAmount.Text = string.Format("{0}", eachRepayment.ToString());
                         txtTotalRepayentAmount.Text = totalRepayment.ToString();
                         break;
 
                     case "3":
                         totalInterest = (amountBorrowed * 6.7 / 100) * 1095 / 100;
-                        eachRepayment = totalInterest / 65;
+                        eachRepayment = totalInterest / 52;
                         totalRepayment = amountBorrowed + totalInterest;
 
                         txtTotalInterest.Text = totalInterest.ToString();
-                        txtRepaymentAmount.Text = string.Format("{0:C}", eachRepayment.ToString());
+                        txtRepaymentAmount.Text = string.Format("{0}", eachRepayment.ToString());
                         txtTotalRepayentAmount.Text = totalRepayment.ToString();
                         break;
 
                     case "4":
                         totalInterest = (amountBorrowed * 6.7 / 100) * 1460 / 100;
-                        eachRepayment = totalInterest / 65;
+                        eachRepayment = totalInterest / 52;
+                        totalRepayment = amountBorrowed + totalInterest;
+
+                        txtTotalInterest.Text = totalInterest.ToString();
+                        txtRepaymentAmount.Text = string.Format("{0}", eachRepayment.ToString());
+                        txtTotalRepayentAmount.Text = totalRepayment.ToString();
+                        break;
+
+                    case "5":
+                        totalInterest = (amountBorrowed * 6.7 / 100) * 1825 / 100;
+                        eachRepayment = totalInterest / 52;
                         totalRepayment = amountBorrowed + totalInterest;
 
                         txtTotalInterest.Text = totalInterest.ToString();
                         txtRepaymentAmount.Text = string.Format("{0:C}", eachRepayment.ToString());
                         txtTotalRepayentAmount.Text = totalRepayment.ToString();
                         break;
+                    default:
+                        break;
+                }
+            }
+            else  if (loanType == "Student Loan (6.7% APR)" || loanType == "Secured Savings Loan (6.7% APR)" && repayTerm == "2")
+            {
+                switch (loanLength)
+                {
+                    case "1":
+                        totalInterest = (amountBorrowed * 6.7 / 100) * 365 / 100;
+                        eachRepayment = totalInterest / 26;
+                        totalRepayment = amountBorrowed + totalInterest;
+
+                        txtTotalInterest.Text = totalInterest.ToString();
+                        txtRepaymentAmount.Text = string.Format("{0}", eachRepayment.ToString());
+                        txtTotalRepayentAmount.Text = totalRepayment.ToString();
+                        break;
+
+                    case "2":
+                        totalInterest = (amountBorrowed * 6.7 / 100) * 730 / 100;
+                        eachRepayment = totalInterest / 26;
+                        totalRepayment = amountBorrowed + totalInterest;
+
+                        txtTotalInterest.Text = totalInterest.ToString();
+                        txtRepaymentAmount.Text = string.Format("{0}", eachRepayment.ToString());
+                        txtTotalRepayentAmount.Text = totalRepayment.ToString();
+                        break;
+
+                    case "3":
+                        totalInterest = (amountBorrowed * 6.7 / 100) * 1095 / 100;
+                        eachRepayment = totalInterest / 26;
+                        totalRepayment = amountBorrowed + totalInterest;
+
+                        txtTotalInterest.Text = totalInterest.ToString();
+                        txtRepaymentAmount.Text = string.Format("{0}", eachRepayment.ToString());
+                        txtTotalRepayentAmount.Text = totalRepayment.ToString();
+                        break;
+
+                    case "4":
+                        totalInterest = (amountBorrowed * 6.7 / 100) * 1460 / 100;
+                        eachRepayment = totalInterest / 26;
+                        totalRepayment = amountBorrowed + totalInterest;
+
+                        txtTotalInterest.Text = totalInterest.ToString();
+                        txtRepaymentAmount.Text = string.Format("{0}", eachRepayment.ToString());
+                        txtTotalRepayentAmount.Text = totalRepayment.ToString();
+                        break;
 
                     case "5":
                         totalInterest = (amountBorrowed * 6.7 / 100) * 1825 / 100;
-                        eachRepayment = totalInterest / 65;
+                        eachRepayment = totalInterest / 26;
                         totalRepayment = amountBorrowed + totalInterest;
 
                         txtTotalInterest.Text = totalInterest.ToString();
