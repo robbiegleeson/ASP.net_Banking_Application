@@ -60,7 +60,7 @@ namespace DublinBusinessSchoolCreditUnion
 
                     lblAccountNum.Text = match.AccountNumber.ToString();
                     lblAccountType.Text = match.AccountType;
-                    lblAccountBalance.Text = match.Balance.ToString();
+                    lblAccountBalance.Text = CurrencyFormat(match.Balance);
                 }
                 catch (Exception)
                 {
@@ -103,7 +103,7 @@ namespace DublinBusinessSchoolCreditUnion
                 UpdateBalance();
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
@@ -144,7 +144,7 @@ namespace DublinBusinessSchoolCreditUnion
                 query.Balance = newBalance;
                 db.SaveChanges();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;
@@ -194,6 +194,13 @@ namespace DublinBusinessSchoolCreditUnion
 
             return query.ToList();
 
+        }
+
+        string CurrencyFormat(int valueInCents)
+        {
+            double convertedValue = (double)valueInCents / 100;
+            string currencyFormat = string.Format("{0:C}", convertedValue);
+            return currencyFormat;
         }
     }
 }

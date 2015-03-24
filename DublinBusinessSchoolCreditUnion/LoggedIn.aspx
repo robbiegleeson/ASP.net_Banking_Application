@@ -42,7 +42,7 @@
                         <div class="panel-body">
                             <ul>
                                 <li>
-                                    <asp:LinkButton ID="lblInternalTransfer" runat="server" Text="Make Payment" OnClick="lblInternalTransfer_Click"></asp:LinkButton></li
+                                    <asp:LinkButton ID="lblInternalTransfer" runat="server" Text="Make Payment" OnClick="lblInternalTransfer_Click"></asp:LinkButton></li>
                                 <li>
                                     <asp:Label ID="lblSessionValue" runat="server"></asp:Label></li>
                             </ul>
