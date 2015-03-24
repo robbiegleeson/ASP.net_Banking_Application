@@ -4,6 +4,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section>
+        <div class="row">
+            <div class="ticker">
+            <div class="col-md-12">
+                <iframe src="http://www.exchangerates.org.uk/widget/ER-LRTICKER.php?w=1500&s=1&mc=EUR&mbg=FFFDFD&bs=no&bc=000044&f=verdana&fs=10px&fc=000044&lc=000044&lhc=FE9A00&vc=FE9A00&vcu=008000&vcd=FF0000&" width="1138" height="30" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+            </div>
+            </div>
+        </div>
         <div class="main_img">
         <div class="row">
             <div class="col-md-9 col-sm-9 col-xs-9">
@@ -38,10 +45,15 @@
                     </a>
                 </div>
                 </div>
-            </div>
             <div class="col-md-3 col-sm-3 col-xs-3">
-
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Exchange Rates</div>
+                    <div class="panel-body">
+                    </div>
+                </div>
             </div>
+            </div>
+            
         </div>
     </section>
 </asp:Content>

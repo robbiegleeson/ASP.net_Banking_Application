@@ -10,7 +10,7 @@
 namespace DublinBusinessSchoolCreditUnion {
     
     
-    public partial class Login {
+    public partial class AdminLogin {
         
         /// <summary>
         /// lblUsername control.
@@ -56,23 +56,5 @@ namespace DublinBusinessSchoolCreditUnion {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnLogin;
-        
-        /// <summary>
-        /// lblNotRegistered control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNotRegistered;
-        
-        /// <summary>
-        /// lblAdminLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAdminLogin;
     }
 }

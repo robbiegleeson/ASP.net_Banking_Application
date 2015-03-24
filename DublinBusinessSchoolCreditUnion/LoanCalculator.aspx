@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="LoanCalculator.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.LoanCalculator" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoggedInMaster.master" AutoEventWireup="true" CodeBehind="LoanCalculator.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.LoanCalculator" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
