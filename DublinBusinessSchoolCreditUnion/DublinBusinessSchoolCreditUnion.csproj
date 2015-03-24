@@ -204,6 +204,7 @@
     <Content Include="Images\email.png" />
     <Content Include="Images\facebook.png" />
     <Content Include="Images\FacebookIcon.png" />
+    <Content Include="Images\fb.png" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\HolidayLoan.jpg" />
     <Content Include="Images\holidayloans kids.jpg" />
