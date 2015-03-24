@@ -11,7 +11,8 @@
                 <p>The webpage you requested is not available at this time, please Log in to access the requested features</p>
             </div><!--/panel-body-->
             <div class="panel-footer">
-
+                <script src="Scripts/JSONtransactions.js"></script>
+                <div id="jsonTest"></div>
             </div><!--/panel-footer-->
         </div><!--/panel-->
     </div><!--/row-->
