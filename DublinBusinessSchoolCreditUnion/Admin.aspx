@@ -71,7 +71,7 @@
                         </h4>
                     </div>
                     <!--/panel-heading-->
-                    <div id="collapse2" class="panel panel-collapse">
+                    <div id="collapse2" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul class="adminLists">
                                 <li>
@@ -96,7 +96,7 @@
                         </h4>
                     </div>
                     <!--/panel-heading-->
-                    <div id="collapse3" class="panel panel-collapse">
+                    <div id="collapse3" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul class="adminLists">
                                 <li>
@@ -138,7 +138,7 @@
                         </h4>
                     </div>
                     <!--/panel-heading-->
-                    <div id="collapse4" class="panel panel-collapse">
+                    <div id="collapse4" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul class="adminLists">
                                 <li>

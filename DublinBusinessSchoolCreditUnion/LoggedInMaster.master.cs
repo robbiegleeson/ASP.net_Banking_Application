@@ -11,7 +11,12 @@ namespace DublinBusinessSchoolCreditUnion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            liAdmin.Visible = CustomSessionObject.Current.IsAdmin;
+            lblAdmin.Visible = CustomSessionObject.Current.IsAdmin;
+
+            if (lblAdmin.Visible == true)
+            {
+                lblMyAccount.Visible = false;
+            }
                
         }
 
