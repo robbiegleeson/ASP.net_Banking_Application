@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoggedInMaster.master" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.Admin" %>
-
+ 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -62,8 +62,8 @@
                     <!--/panel-collapse-->
                 </div>
                 <!--/panel-primary-->
-
-
+ 
+ 
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -87,7 +87,7 @@
                 <!--/panel-primary-->
             </div>
             <!--/col-md-4-->
-
+ 
             <div class="col-md-4">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
@@ -119,6 +119,10 @@
                                     <asp:Label ID="lblDisplayCity" runat="server"></asp:Label></li>
                                 <li>
                                     <asp:Label ID="lblDisplayCounty" runat="server"></asp:Label></li>
+                                <li>
+                                    <asp:Button ID="btnExportXML" runat="server" Text="Export Customer Details (XML)" OnClick="btnExportXML_Click" /></li>
+                                <li>
+                                    <asp:Button ID="btnSaveXML" runat="server" Text="Save Customer Details (XML)" OnClick="btnSaveXML_Click" /></li>
                             </ul>
                         </div>
                         <!--panel-body-->
@@ -126,7 +130,7 @@
                     <!--/panel-collapse-->
                 </div>
                 <!--/panel-primary-->
-
+ 
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -154,7 +158,7 @@
                 <!--/panel-primary-->
             </div>
             <!--/col-md-4-->
-
+ 
             <div class="col-md-2">
                 <!--right aside-->
             </div>

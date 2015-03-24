@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Customer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CustomerID>2</CustomerID>
+  <FirstName>Rob</FirstName>
+  <Surname>Gleeson</Surname>
+  <Email>rob@icloud.com</Email>
+  <Phone>087-9865423</Phone>
+  <AddressLine1>The Village</AddressLine1>
+  <AddressLine2>Emo</AddressLine2>
+  <City>Portarlington</City>
+  <County>Laois</County>
+  <OnlineCustomer>false</OnlineCustomer>
+</Customer>

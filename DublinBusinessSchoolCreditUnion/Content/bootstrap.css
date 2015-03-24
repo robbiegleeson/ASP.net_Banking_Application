@@ -6857,6 +6857,35 @@ border-radius: 10px;
     border-radius: 10px;
 }
 
+.col-md-1 col-sm-1 col-xs-1 facebook{
+    text-align:center;
+}
+
+.facebook{
+float: left;
+  text-align: center;
+}
+
+.facebook a{
+  text-decoration: none;
+  font-size: 12px;
+  width: 110px;
+  height: 99px;
+  text-align: center;
+  float: left;
+  border-left: 1px solid #0e4664;
+  border-right: 1px solid #003958;
+}
+
+.facebook a:hover {
+  text-decoration: none;
+  background: #1683ab;
+  border-left: 1px solid #1683ab;
+  border-right: 1px solid #1683ab;
+  color: #b1d8e3;
+}
+
+
 .col-md-1 img{
     margin-top: 30px;
     width: 50px;
@@ -6970,7 +6999,7 @@ body {
     padding: 2px;
 }
 
-.adminLists li {
+.adminLists li, #adminBottomStrip {
     padding: 5px;
 }
 

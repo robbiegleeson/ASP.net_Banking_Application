@@ -24,9 +24,11 @@
                     <div class="col-md-9 col-sm-9 col-xs-9" >
                         <img src="images/Credit-Union-logo-dbs.png" />
                     </div>
-                    <div class="col-md-1 col-sm-1 col-xs-1">
+                    <div class="col-md-1 col-sm-1 col-xs-1 facebook">
                         <a href="http://www.facebook.com">
-                            <img src="images/fb.png" /></a>
+                            <img src="images/fb.png" />
+                        </a>
+                        LOGIN
                     </div>
                     <div class="col-md-1 col-sm-1 col-xs-1">
                         <a href="http://www.twitter.com">
