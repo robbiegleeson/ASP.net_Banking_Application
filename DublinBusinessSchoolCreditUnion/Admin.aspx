@@ -77,6 +77,8 @@
                                 <li><asp:Label ID="lblDisplayAddress2" runat="server"></asp:Label></li>
                                 <li><asp:Label ID="lblDisplayCity" runat="server"></asp:Label></li>
                                 <li><asp:Label ID="lblDisplayCounty" runat="server"></asp:Label></li>
+                                <li><asp:Button ID="btnExportXML" runat="server" Text="Export Customer Details (XML)" OnClick="btnExportXML_Click" /></li>
+                                <li><asp:Button ID="btnSaveXML" runat="server" Text="Save Customer Details (XML)" OnClick="btnSaveXML_Click" /></li>
                             </ul>
                         </div><!--panel-body-->
                     </div><!--/panel-collapse-->
@@ -104,7 +106,7 @@
         <div class="col-md-2">
             <!--right aside-->
         </div><!--/col-md-2-->
-        <div class="row">
+        <div class="row" id="adminBottomStrip">
             <p></p>
         </div><!--/row-->
     </div>

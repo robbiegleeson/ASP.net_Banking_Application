@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Customer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CustomerID>1</CustomerID>
+  <FirstName>Mike</FirstName>
+  <Surname>Maher</Surname>
+  <Email>mike@gmail.com</Email>
+  <Phone>085-4586215</Phone>
+  <AddressLine1>Fairview</AddressLine1>
+  <AddressLine2>North</AddressLine2>
+  <City>Dublin</City>
+  <County>Dublin</County>
+  <OnlineCustomer>true</OnlineCustomer>
+  <UserName>miketmaher</UserName>
+  <CustomerPassword>password1</CustomerPassword>
+</Customer>

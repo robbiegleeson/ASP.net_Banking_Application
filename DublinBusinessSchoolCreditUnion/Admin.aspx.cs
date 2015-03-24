@@ -5,6 +5,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace DublinBusinessSchoolCreditUnion
 {
@@ -107,6 +110,8 @@ namespace DublinBusinessSchoolCreditUnion
 
         private void RemoveCustomer()
         {
+            bool hasAccounts = false;
+
             var cxt = new CustomerContext();
 
             int customerID = int.Parse(cboCustomers.SelectedValue);
@@ -117,14 +122,21 @@ namespace DublinBusinessSchoolCreditUnion
                                         where c.CustomerID == customerID
                                         select a.AccountNumber);
 
-            if (customerWithAccounts != null)
+            foreach (var account in customerWithAccounts)
             {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Customer has open Accounts!')", true);
+                if (account == 0)
+                    hasAccounts = false;
+                else
+                    hasAccounts = true;
             }
+
+            if (hasAccounts)
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Customer has open Accounts!')", true);
             else
             {
                 cxt.Customers.Remove(cxt.Customers.Where(c => c.CustomerID == customerID).First());
                 cxt.SaveChanges();
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alert", "alert('Customer Record Deleted.')", true);
             }
 
         }
@@ -143,7 +155,7 @@ namespace DublinBusinessSchoolCreditUnion
             lblDisplayPhone.Text = currentCustomer.Phone;
             lblDisplayAddress1.Text = currentCustomer.AddressLine1;
             lblDisplayAddress2.Text = currentCustomer.AddressLine2;
-            lblCity.Text = currentCustomer.City;
+            lblDisplayCity.Text = currentCustomer.City;
             lblDisplayCounty.Text = currentCustomer.County;
         }
 
@@ -170,6 +182,49 @@ namespace DublinBusinessSchoolCreditUnion
             cboAccounts.Items.Clear();
             PrimeAccountDropDown();
             cboAccounts.Visible = true;
+        }
+
+        protected void btnExportXML_Click(object sender, EventArgs e)
+        {
+            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + Path.DirectorySeparatorChar + "Customer" + Guid.NewGuid() + ".xml";
+            string fileName = Path.GetFileName(filePath);
+            Stream stream = new FileStream(filePath, FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read);
+            long bytesToRead = stream.Length;
+            Response.ContentType = "application/octet-stream";
+            Response.AddHeader("Content-Disposition", "attachment; fileName" + fileName);
+
+            while (bytesToRead > 0)
+            {
+                if (Response.IsClientConnected)
+                {
+                    byte[] buffer = new Byte[10000];
+                    int length = stream.Read(buffer, 0, 10000);
+                    Response.OutputStream.Write(buffer, 0, length);
+                    Response.Flush();
+                    bytesToRead = bytesToRead - 1;
+                }
+                else
+                    bytesToRead = -1;
+            }
+
+        }
+
+        protected void btnSaveXML_Click(object sender, EventArgs e)
+        {
+            string filePath = "~/XMLfiles/" + Guid.NewGuid() + ".xml";
+            StreamWriter writer = new StreamWriter(Server.MapPath(filePath));
+            SerializeCustomerInfo(writer);
+        }
+
+        private void SerializeCustomerInfo(StreamWriter writer)
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(Customer));
+            int customerId = int.Parse(cboViewCustomers.SelectedValue);
+
+            var cxt = new CustomerContext();
+            Customer customer = cxt.Customers.Where(c => c.CustomerID == customerId).First();
+
+            xmlSerializer.Serialize(writer, customer);
         }
     }
 }

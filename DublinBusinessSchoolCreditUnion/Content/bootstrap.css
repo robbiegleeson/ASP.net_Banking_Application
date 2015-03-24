@@ -6970,6 +6970,6 @@ body {
     padding: 2px;
 }
 
-.adminLists li {
+.adminLists li, #adminBottomStrip {
     padding: 5px;
 }
