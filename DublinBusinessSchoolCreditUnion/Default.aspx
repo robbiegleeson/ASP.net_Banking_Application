@@ -6,7 +6,7 @@
     <section>
         <div class="row">
             <div class="ticker">
-            <div class="col-md-12">
+            <div class="col-md-12 ticker">
                 <iframe src="http://www.exchangerates.org.uk/widget/ER-LRTICKER.php?w=1500&s=1&mc=EUR&mbg=FFFDFD&bs=no&bc=000044&f=verdana&fs=10px&fc=000044&lc=000044&lhc=FE9A00&vc=FE9A00&vcu=008000&vcd=FF0000&" width="1138" height="30" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
             </div>
             </div>

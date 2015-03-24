@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-md-1 col-sm-1 col-xs-1">
                         <a href="http://www.facebook.com">
-                            <img src="images/facebook.png" /></a>
+                            <img src="images/fb.png" /></a>
                     </div>
                     <div class="col-md-1 col-sm-1 col-xs-1">
                         <a href="http://www.twitter.com">
@@ -70,52 +70,58 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
 
-            <div id="footer">
-                <div class="footerrow">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-4 col-xs-4">
-                            <h4>Opening Hours</h4>
-                            <ul>
-                                <li>Mon: 9.30am - 5.00pm</li>
-                                <li>Tue: 9.30am - 5.00pm</li>
-                                <li>Wed: 9.30am - 5.00pm</li>
-                                <li>Thu: 9.30am - 5.00pm</li>
-                                <li>Fri: 9.30am - 5.00pm</li>
-                                <li>Sat: 11.00am - 3.00pm</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-4">
-                            <h4>Contact Us</h4>
-
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <a href="#" class="btn btn-info btn-lg">
-                                      <span class="glyphicon glyphicon-phone-alt"></span> Phone
-                                    </a>
-                                </div>
-                                <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <a href="#" class="btn btn-info btn-lg">
-                                        <span class="glyphicon glyphicon-envelope"></span> E-Mail 
-                                    </a>
-                                </div>
+           <div id="footer">
+                    <div class="footerrow">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <h4>Social</h4>
                                 <div class="row">
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-md-4">
+                                        <a href="http://www.facebook.com">
+                                            <img src="images/fb.png" />
+                                        </a>
                                     </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                        <p id="center">&copy; <%:DateTime.Now.Year %> BIFFO &amp; MikeMaherMedia</p>
+                                    <div class="col-md-4">
+                                        <a href="http://www.twitter.com">
+                            <img src="images/twitter.png" /></a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <img src="images/email.png" />
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4 col-sm-4 col-xs-4">
-                            <h4>CU Online</h4>
-                            <p>Members of Dublin Business School Student's Credit Union can avail of 24/7 online access to their accounts via our CU online service. To sign up for this service and to find out more about CU online click the link below.</p>
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <h4>Contact Us</h4>
+
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <a href="#" class="btn btn-info btn-lg">
+                                            <span class="glyphicon glyphicon-phone-alt"></span>Phone
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <a href="#" class="btn btn-info btn-lg">
+                                            <span class="glyphicon glyphicon-envelope"></span>E-Mail 
+                                        </a>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <p id="center">&copy; <%:DateTime.Now.Year %> BIFFO &amp; MikeMaherMedia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4">
+                                <h4>CU Online</h4>
+                                <p>Members of Dublin Business School Student's Credit Union can avail of 24/7 online access to their accounts via our CU online service. To sign up for this service and to find out more about CU online click the link below.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-                        </div>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
