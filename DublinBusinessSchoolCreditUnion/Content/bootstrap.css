@@ -6965,3 +6965,7 @@ body {
     height: 80px;
     position: absolute;
 }
+
+.LoanCalculator li{
+    padding: 2px;
+}

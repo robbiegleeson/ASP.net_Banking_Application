@@ -43,7 +43,7 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="collapse2">Delete User</a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Delete User</a>
                         </h4>
                     </div><!--/panel-heading-->
                     <div id="collapse2" class="panel panel-collapse">
@@ -61,14 +61,14 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="collapse3">View User Details</a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">View User Details</a>
                         </h4>
                     </div><!--/panel-heading-->
                     <div id="collapse3" class="panel panel-collapse">
                         <div class="panel-body">
                             <ul>
                                 <li><asp:DropDownList ID="cboViewCustomers" runat="server"></asp:DropDownList></li>
-                                <li><asp:Button ID="btnView" runat="server" Text="Delete" OnClick="btnView_Click" /></li>
+                                <li><asp:Button ID="btnView" runat="server" Text="View Details" OnClick="btnView_Click" /></li>
                                 <li><asp:Label ID="lblDisplayFname" runat="server"></asp:Label></li>
                                 <li><asp:Label ID="lblDisplayLname" runat="server"></asp:Label></li>
                                 <li><asp:Label ID="lblDisplayEmail" runat="server"></asp:Label></li>
@@ -85,15 +85,15 @@
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="collapse4">Close Accounts</a>
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Close Accounts</a>
                         </h4>
                     </div><!--/panel-heading-->
                     <div id="collapse4" class="panel panel-collapse">
                         <div class="panel-body">
                             <ul>
-                                <li><asp:DropDownList ID="cboCustomerDetails" runat="server"></asp:DropDownList></li>
+                                <li><asp:DropDownList ID="cboCustomerDetails" runat="server" OnSelectedIndexChanged="cboCustomerDetails_SelectedIndexChanged"></asp:DropDownList></li>
                                 <li><asp:DropDownList ID="cboAccounts" runat="server"></asp:DropDownList></li>
-                                <li><asp:Button ID="btnCloseAccount" runat="server" Text="Close Account" /></li>
+                                <li><asp:Button ID="btnCloseAccount" runat="server" Text="Close Account" OnClick="btnCloseAccount_Click" /></li>
                             </ul>
                         </div><!--/panel-body-->
                     </div><!--/panel-collapse-->
@@ -103,5 +103,8 @@
         <div class="col-md-2">
             <!--right aside-->
         </div><!--/col-md-2-->
+        <div class="row">
+
+        </div>
     </div>
 </asp:Content>

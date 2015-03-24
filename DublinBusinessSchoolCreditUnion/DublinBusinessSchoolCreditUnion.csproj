@@ -128,13 +128,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Account\Login.aspx" />
-    <Content Include="Account\Manage.aspx" />
-    <Content Include="Account\OpenAuthProviders.ascx" />
-    <Content Include="Account\Register.aspx" />
-    <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Admin.aspx" />
     <Content Include="Branches.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\JavaScript.js" />
@@ -227,6 +223,7 @@
     <Content Include="Images\sky.jpeg" />
     <Content Include="Images\twitter.png" />
     <Content Include="Images\TwitterIcon.png" />
+    <Content Include="LoanCalculator.aspx" />
     <Content Include="LoggedIn.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
@@ -294,41 +291,6 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
-    <Compile Include="Account\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Manage.aspx.cs">
-      <DependentUpon>Manage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Manage.aspx.designer.cs">
-      <DependentUpon>Manage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\OpenAuthProviders.ascx.cs">
-      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
-      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
-      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
-      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Branches.aspx.cs">
       <DependentUpon>Branches.aspx</DependentUpon>
@@ -336,6 +298,13 @@
     </Compile>
     <Compile Include="Branches.aspx.designer.cs">
       <DependentUpon>Branches.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomSessionObject.cs" />
     <Compile Include="Default.aspx.cs">
@@ -347,6 +316,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LoanCalculator.aspx.cs">
+      <DependentUpon>LoanCalculator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanCalculator.aspx.designer.cs">
+      <DependentUpon>LoanCalculator.aspx</DependentUpon>
     </Compile>
     <Compile Include="LoggedIn.aspx.cs">
       <DependentUpon>LoggedIn.aspx</DependentUpon>
@@ -414,9 +390,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Account\Web.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
