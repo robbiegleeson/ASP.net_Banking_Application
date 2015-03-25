@@ -29,7 +29,7 @@ namespace DublinBusinessSchoolCreditUnion
 
         protected void LOGOUT_Click(object sender, EventArgs e)
         {
-            MsgBox("You Have Logged Out", this.Page, this);
+
             CustomSessionObject.Current.SessionUsername = null;
             CustomSessionObject.Current.LoginStatus = false;
             CustomSessionObject.Current.IsAdmin = false;
@@ -37,12 +37,6 @@ namespace DublinBusinessSchoolCreditUnion
             
         }
 
-        public void MsgBox(String ex, Page pg, Object obj)
-        {
-            string s = "<SCRIPT language='javascript'>alert('" + ex.Replace("\r\n", "\\n").Replace("'", "") + "'); </SCRIPT>";
-            Type cstype = obj.GetType();
-            ClientScriptManager cs = pg.ClientScript;
-            cs.RegisterClientScriptBlock(cstype, s, s.ToString());
-        }
+      
     }
 }
