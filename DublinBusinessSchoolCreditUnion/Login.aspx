@@ -25,6 +25,7 @@
                                 <li>
                                     <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" /></li>
                                 <li><asp:Label ID="lblNotRegistered" runat="server">Not Registered? Get Going <a href="Register.aspx">Here</a></asp:Label></li>
+                                <li><asp:Label ID="lblRecoverPassword" runat="server">Forgotten Password? Click <a href="RecoverPassword.aspx">Here</a></asp:Label></li>
                                 <li><asp:Label ID="lblAdminLogin" runat="server">Admin Users Login <a href="AdminLogin.aspx">Here</a></asp:Label></li>
                             </ul>
                         </div>

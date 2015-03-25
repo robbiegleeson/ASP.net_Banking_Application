@@ -14,6 +14,8 @@ namespace DublinBusinessSchoolCreditUnion
         {
            
             //What's going on here?
+
+            //Clears the cache when back button is pressed or user leaves the web site making the session null
             Response.Cache.SetCacheability(HttpCacheability.NoCache);
             Response.Cache.SetExpires(DateTime.Now.AddSeconds(-1));
             Response.Cache.SetNoStore();

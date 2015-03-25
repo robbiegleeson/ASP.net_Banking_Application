@@ -5,7 +5,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
         <div class="col-md-6">
-            <h2 class="form-signin-heading">Contact Us</h2>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+            <h4 class="form-signin-heading">Contact Us</h4>
+                    </div><!--/panel-heading-->
+                <div class="panel-body">
             <div class="form-signin">
                 <label for="txtName" class="sr-only">Name</label>
                 <asp:Textbox ID="txtName" CssClass="form-control" runat="server" placeholder="Name"  />
@@ -24,6 +28,8 @@
         
                 <asp:Button ID="btnSend" runat="server" CssClass="btn btn-lg btn-primary btn-block" Text="Send" onClick="btnSend_Click" />
             </div><!--/form-->
+                    </div><!--/panel-body-->
+                </div><!--/panel-primary-->
         </div><!--/col-md-6-->
         <div class="col-md-6">
             

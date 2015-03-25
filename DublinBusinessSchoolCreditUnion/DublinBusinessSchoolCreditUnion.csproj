@@ -206,6 +206,7 @@
     <Content Include="Images\Credit-Union-logo-PMS-jpg.png" />
     <Content Include="Images\Credit-Union-logo.png" />
     <Content Include="Images\DBS-logo-fit.png" />
+    <Content Include="Images\DublinBSLOGO.png" />
     <Content Include="Images\email.png" />
     <Content Include="Images\facebook.png" />
     <Content Include="Images\FacebookIcon.png" />
@@ -216,6 +217,7 @@
     <Content Include="Images\HomeLoan.PNG" />
     <Content Include="Images\iconmonstr-facebook-5-icon-256.png" />
     <Content Include="Images\lock.png" />
+    <Content Include="Images\NewLogoxcf.png" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
     <Content Include="Images\orderedList2.png" />

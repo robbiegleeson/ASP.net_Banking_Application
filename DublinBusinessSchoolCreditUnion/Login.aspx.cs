@@ -16,6 +16,7 @@ namespace DublinBusinessSchoolCreditUnion
         }
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+
             var _db = new CustomerContext();
             Customer currentCustomer = (from c in _db.Customers
                          where c.UserName == txtUsername.Text && c.CustomerPassword == txtPassword.Text
@@ -33,8 +34,6 @@ namespace DublinBusinessSchoolCreditUnion
                 }
                 else
                     Server.Transfer("LoggedIn.aspx");
-
-                
             }
             else
             {
