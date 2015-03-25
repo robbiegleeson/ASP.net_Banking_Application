@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoggedInMaster.master" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.Admin" %>
  
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="Scripts/JSONtransactions.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row">
@@ -167,6 +168,11 @@
                 <p></p>
             </div>
             <!--/row-->
-        </div>
+            <div class="row">
+                <div id="text">
+
+                </div>
+            </div><!-/row-->
+        </div><!--/accordion-->
     </div>
 </asp:Content>

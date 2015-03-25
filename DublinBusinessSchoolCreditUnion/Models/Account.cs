@@ -17,14 +17,5 @@ namespace DublinBusinessSchoolCreditUnion.Models
         public int Balance { get; set; }
         public int? OverDraftLimit { get; set; }
         public int CustomerID { get; set; }
-
-        //public string DisplayBalance
-        //{
-        //    get
-        //    {
-        //        double balanceToDisplay = Balance / 100;
-        //        return string.Format("{0:C}", balanceToDisplay);
-        //    }
-        //}
     }
 }
