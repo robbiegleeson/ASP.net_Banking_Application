@@ -6,10 +6,10 @@
     <div class="row">
         <div class="panel panel-primary">
             <div class="panel-heading">
-                <h2 class="panel-title">Error!</h2>
+                <h2 class="panel-title">Warning!</h2>
             </div><!--/panel-heading-->
             <div class="panel-body">
-                <p>The webpage you requested is not available at this time, please Log in to access the requested features</p>
+                <p>The webpage you requested is not available at this time, please Log in to access the requested features.</p>
             </div><!--/panel-body-->
             <div class="panel-footer">
                 

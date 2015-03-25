@@ -18,7 +18,7 @@
             htmlTable.push("</tr>");
 
             for (i = 0; i < numOfTransactions; i++) {
-                console.log("Success: " + returnData[i].DestinationAccountNumber);
+               
                 htmlTable.push("<tr>");
 
                 var date = new Date(parseInt(returnData[i].TransactionDateTime.substr(6)))
@@ -28,6 +28,7 @@
                       date.getMinutes();
 
                 var amount = returnData[i].TransactionAmount / 100;
+                amount = amount.toFixed(2);
 
                 htmlTable.push("<td>" + returnData[i].TransactionAccountNumber + "</td>");
                 htmlTable.push("<td>" + returnData[i].DestinationAccountNumber + "</td>");

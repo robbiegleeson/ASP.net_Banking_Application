@@ -6,11 +6,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="panel-group" id="accordion">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <!--left aside-->
             </div><!--/col-md-2-->
         
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -89,7 +89,7 @@
             </div>
             <!--/col-md-4-->
  
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h4 class="panel-title">
@@ -160,7 +160,7 @@
             </div>
             <!--/col-md-4-->
  
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <!--right aside-->
             </div>
             <!--/col-md-2-->
@@ -169,10 +169,10 @@
         <hr />
     </div><!--/row-->
     <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-1">
 
         </div><!--/col-md-2-->
-        <div class="col-md-8">
+        <div class="col-md-10">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h4 class="panel-title">
@@ -188,7 +188,7 @@
                 </div><!--/panel-collapse-->
             </div><!--/panel-primary-->
         </div>
-        <div class="col-md-2">
+        <div class="col-md-1">
 
         </div><!--/col-md-2-->
         </div><!--/row-->

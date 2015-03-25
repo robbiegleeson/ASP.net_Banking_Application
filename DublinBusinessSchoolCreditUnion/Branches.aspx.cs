@@ -25,8 +25,17 @@ namespace DublinBusinessSchoolCreditUnion
 
         public IQueryable<Branch> GetBranches()
         {
+            IQueryable<Branch> query = null;
             var cxt = new CustomerContext();
-            IQueryable<Branch> query = cxt.Branches;
+            try
+            {
+                query = cxt.Branches;
+            }
+            catch (Exception ex)
+            {
+                FireBugWriter.Write(ex.Message);
+            }
+
             return query;
         }
     }
