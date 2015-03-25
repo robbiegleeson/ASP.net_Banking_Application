@@ -4,12 +4,12 @@
     <script src="Scripts/JSONtransactions.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="row">
-        <div class="col-md-2">
-            <!--left aside-->
-        </div>
-        <!--/col-md-2-->
-        <div class="panel-group" id="accordion">
+    <div class="panel-group" id="accordion">
+        <div class="row">
+            <div class="col-md-2">
+                <!--left aside-->
+            </div><!--/col-md-2-->
+        
             <div class="col-md-4">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
@@ -164,15 +164,33 @@
                 <!--right aside-->
             </div>
             <!--/col-md-2-->
-            <div class="row">
-                <p></p>
-            </div>
-            <!--/row-->
-            <div class="row">
-                <div id="text">
-
-                </div>
-            </div><!-/row-->
-        </div><!--/accordion-->
     </div>
+    <div class="row">
+        <hr />
+    </div><!--/row-->
+    <div class="row">
+        <div class="col-md-2">
+
+        </div><!--/col-md-2-->
+        <div class="col-md-8">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">All Account Transactions</a>
+                    </h4>
+                </div><!--/panel-heading-->
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div  id="test">
+
+                        </div>
+                    </div><!--/panel-body-->
+                </div><!--/panel-collapse-->
+            </div><!--/panel-primary-->
+        </div>
+        <div class="col-md-2">
+
+        </div><!--/col-md-2-->
+        </div><!--/row-->
+    </div><!--/accordion-->
 </asp:Content>
