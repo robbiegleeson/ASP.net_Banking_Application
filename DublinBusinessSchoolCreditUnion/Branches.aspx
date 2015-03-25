@@ -29,7 +29,11 @@
                     </asp:ListView>
                 </div><!--/panel-body-->
                 <div class="panel-footer">
-
+                    <h4>Opening Hours</h4>
+                    <ul>
+                        <li>Monday - Thursday: 09.00 - 17.30</li>
+                        <li>Friday - Saturday: 10.00 - 16.00</li>
+                    </ul>
                 </div><!--/panel-footer-->
             </div><!--/panel-->
         </div><!--/col-md-6-->

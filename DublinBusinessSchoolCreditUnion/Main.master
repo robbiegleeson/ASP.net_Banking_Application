@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="Content/bootstrap.css" />
     <script src="Scripts/jquery-1.8.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="Content/JavaScript.js"></script>
 
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -55,7 +57,7 @@
                                         <li><a href="Contact.aspx">Contact</a></li>
                                     </ul>
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li><a href="../navbar-static-top/">MEMBERS AREA</a></li>
+                                        
                                         <li><a href="Register.aspx">
                                             <asp:Label ID="Register" runat="server">Register</asp:Label></a></li>
                                         <li><a href="Login.aspx">
@@ -124,7 +126,6 @@
             </div>
         </div>
     </form>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    
 </body>
 </html>
