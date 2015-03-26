@@ -32,7 +32,8 @@ namespace DublinBusinessSchoolCreditUnion
                 message.Subject = "Password Recovery";
                 message.Body = "You have recieved this email because you have forgot your password." + Environment.NewLine +
                                "Your password is " + password.CustomerPassword + Environment.NewLine +
-                               "Please login using this password";
+                               "Please login using this password" + Environment.NewLine + Environment.NewLine +
+                               "You're Welcome";
 
                 SmtpClient client = new SmtpClient();
                 client.UseDefaultCredentials = false;
