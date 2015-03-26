@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.Contact" %>
+﻿<%@ Page Title="DBSCU | Contact" MetaKeywords="Credit Union, Internet Banking, Dublin Business School, Loans, Savings" MetaDescription="Send us your question and we'll get back to you as soon as possible" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.Contact" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     
 </asp:Content>
