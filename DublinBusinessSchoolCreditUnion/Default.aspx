@@ -1,6 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.Default" %>
+﻿<%@ Page Title="DBSCU | Home" MetaKeywords="Internet Banking, Credit Union, Savings, Loans" MetaDescription="Homepage of Dublin Business School Credit Union" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.Default" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section>

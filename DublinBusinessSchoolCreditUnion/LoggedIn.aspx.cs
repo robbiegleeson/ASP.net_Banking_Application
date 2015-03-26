@@ -31,41 +31,44 @@ namespace DublinBusinessSchoolCreditUnion
                 LoadAccountNumber();
                 string username = CustomSessionObject.Current.SessionUsername;
 
-                try
+
+                using (var _db = new CustomerContext())
                 {
-                    var _db = new CustomerContext();
-                    var match = (from c in _db.Customers
-                                 join a in _db.Accounts on c.CustomerID equals a.CustomerID
-                                 where c.UserName == username
-                                 select new
-                                 {
-                                     c.FirstName,
-                                     c.Surname,
-                                     a.AccountNumber,
-                                     c.AddressLine1,
-                                     c.AddressLine2,
-                                     c.City,
-                                     c.County,
-                                     c.CustomerID,
-                                     a.AccountType,
-                                     a.Balance
-                                 }).FirstOrDefault();
+                    try
+                    {
+                        var match = (from c in _db.Customers
+                                     join a in _db.Accounts on c.CustomerID equals a.CustomerID
+                                     where c.UserName == username
+                                     select new
+                                     {
+                                         c.FirstName,
+                                         c.Surname,
+                                         a.AccountNumber,
+                                         c.AddressLine1,
+                                         c.AddressLine2,
+                                         c.City,
+                                         c.County,
+                                         c.CustomerID,
+                                         a.AccountType,
+                                         a.Balance
+                                     }).FirstOrDefault();
 
-                    lblName.Text = match.FirstName + " " + match.Surname;
-                    lblAccountNumber.Text = match.AccountNumber.ToString();
-                    lblAddressLine1.Text = match.AddressLine1;
-                    lblAddressLine2.Text = match.AddressLine2;
-                    lblCity.Text = match.City;
-                    lblCounty.Text = match.County;
+                        lblName.Text = match.FirstName + " " + match.Surname;
+                        lblAccountNumber.Text = match.AccountNumber.ToString();
+                        lblAddressLine1.Text = match.AddressLine1;
+                        lblAddressLine2.Text = match.AddressLine2;
+                        lblCity.Text = match.City;
+                        lblCounty.Text = match.County;
 
-                    lblAccountNum.Text = match.AccountNumber.ToString();
-                    lblAccountType.Text = match.AccountType;
-                    lblAccountBalance.Text = CurrencyFormat(match.Balance);
-                }
-                catch (Exception)
-                {
-
-                    throw;
+                        lblAccountNum.Text = match.AccountNumber.ToString();
+                        lblAccountType.Text = match.AccountType;
+                        lblAccountBalance.Text = CurrencyFormat(match.Balance);
+                    }
+                    catch (Exception ex)
+                    {
+                        FireBugWriter.Write(ex.Message);
+                        throw;
+                    }
                 }
             }
         }
@@ -83,8 +86,7 @@ namespace DublinBusinessSchoolCreditUnion
             toAccount = int.Parse(txtToAccount.Text);
             amount = int.Parse(txtAmount.Text);
 
-            try
-            {
+            
                 Transaction newTransaction = new Transaction();
                 newTransaction.TransactionAccountNumber = fromAccount;
                 newTransaction.DestinationAccountNumber = toAccount;
@@ -94,84 +96,102 @@ namespace DublinBusinessSchoolCreditUnion
                 newTransaction.TransactionDateTime = stamp;
                 newTransaction.TransactionDescription = description;
 
-                var _db = new CustomerContext();
+                using (var _db = new CustomerContext())
+                {
+                    try
+                    {
+                        _db.Transactions.Add(newTransaction);
+                        success = true;
+                        _db.SaveChanges();
+                        UpdateBalance();
 
-                _db.Transactions.Add(newTransaction);
-                success = true;
-                _db.SaveChanges();
-
-                UpdateBalance();
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            if (success)
-            {
-                txtFromAccount.Text = string.Empty;
-                txtToAccount.Text = string.Empty;
-                txtAmount.Text = string.Empty;
-            }
+                        if (success)
+                        {
+                            txtFromAccount.Text = string.Empty;
+                            txtToAccount.Text = string.Empty;
+                            txtAmount.Text = string.Empty;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        FireBugWriter.Write(ex.Message);
+                        throw ex;
+                    }
+                }
         }
 
         public void LoadAccountNumber()
         {
             string username = CustomSessionObject.Current.SessionUsername;
 
-            var _db = new CustomerContext();
-            var query = (from c in _db.Customers
-                         join a in _db.Accounts on c.CustomerID equals a.CustomerID
-                         where c.UserName == username
-                         select new { a.AccountNumber }).FirstOrDefault();
-            txtFromAccount.Text = query.AccountNumber.ToString();
+            using (var _db = new CustomerContext())
+            {
+                try
+                {
+                    var query = (from c in _db.Customers
+                                 join a in _db.Accounts on c.CustomerID equals a.CustomerID
+                                 where c.UserName == username
+                                 select new { a.AccountNumber }).FirstOrDefault();
+                    txtFromAccount.Text = query.AccountNumber.ToString();
+                }
+                catch (Exception ex)
+                {
+                    FireBugWriter.Write(ex.Message);
+                    throw ex;
+                }
+            }
         }
 
         public void UpdateBalance()
         {
-            try
+            using (var db = new CustomerContext())
             {
-                var db = new CustomerContext();
-                int deductAmount = int.Parse(txtAmount.Text);
-                int accountNumber = int.Parse(txtFromAccount.Text);
+                try
+                {
+                    int deductAmount = int.Parse(txtAmount.Text);
+                    int accountNumber = int.Parse(txtFromAccount.Text);
 
-                var query = (from a in db.Accounts
-                             where a.AccountNumber == accountNumber
-                             select a).First();
+                    var query = (from a in db.Accounts
+                                 where a.AccountNumber == accountNumber
+                                 select a).First();
 
-                int newBalance = query.Balance - deductAmount;
-                query.Balance = newBalance;
-                db.SaveChanges();
+                    int newBalance = query.Balance - deductAmount;
+                    query.Balance = newBalance;
+                    db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    FireBugWriter.Write(ex.Message);
+                    throw ex;
+                }
             }
-            catch (Exception)
-            {
 
-                throw;
-            }
-            try
+            using (var db = new CustomerContext())
             {
-                var db = new CustomerContext();
                 int addAmount = int.Parse(txtAmount.Text);
                 int destinationAccount = int.Parse(txtToAccount.Text);
+                try
+                {
+                    var query = (from a in db.Accounts
+                                 where a.AccountNumber == destinationAccount
+                                 select a).First();
 
-                var query = (from a in db.Accounts
-                             where a.AccountNumber == destinationAccount
-                             select a).First();
-
-                int newBalance = query.Balance + addAmount;
-                query.Balance = newBalance;
-                db.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
+                    int newBalance = query.Balance + addAmount;
+                    query.Balance = newBalance;
+                    db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    FireBugWriter.Write(ex.Message);
+                    throw ex;
+                }
             }
             Response.Redirect(Request.RawUrl);
         }
+
         protected void lblInternalTransfer_Click(object sender, EventArgs e)
         {
-            Server.Transfer("Payments.aspx?txtFromAccount=" + txtFromAccount.Text);
+            Response.Redirect("Payments.aspx?txtFromAccount=" + txtFromAccount.Text, true);
         }
 
         protected void DisplaySessionValue()
@@ -184,16 +204,24 @@ namespace DublinBusinessSchoolCreditUnion
 
         public static List<Transaction> GetTransactions()
         {
-            var _db = new CustomerContext();
+            using (var _db = new CustomerContext())
+            {
+                try
+                {
+                    var query = (from t in _db.Transactions
+                                 join a in _db.Accounts on t.TransactionAccountNumber equals a.AccountNumber
+                                 join c in _db.Customers on a.CustomerID equals c.CustomerID
+                                 where c.CustomerID == a.CustomerID
+                                 select t).ToList();
 
-            var query = (from t in _db.Transactions
-                         join a in _db.Accounts on t.TransactionAccountNumber equals a.AccountNumber
-                         join c in _db.Customers on a.CustomerID equals c.CustomerID
-                         where c.CustomerID == a.CustomerID
-                         select t).ToList();
-
-            return query.ToList();
-
+                    return query.ToList();
+                }
+                catch (Exception ex)
+                {
+                    FireBugWriter.Write(ex.Message);
+                    throw ex;
+                }
+            }
         }
 
         string CurrencyFormat(int valueInCents)

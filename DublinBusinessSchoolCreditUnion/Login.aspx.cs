@@ -17,28 +17,30 @@ namespace DublinBusinessSchoolCreditUnion
         protected void btnLogin_Click(object sender, EventArgs e)
         {
 
-            var _db = new CustomerContext();
-            Customer currentCustomer = (from c in _db.Customers
-                         where c.UserName == txtUsername.Text && c.CustomerPassword == txtPassword.Text
-                         select c).First();
-
-            if (currentCustomer.UserName == txtUsername.Text && currentCustomer.CustomerPassword == txtPassword.Text  )
+            using (var _db = new CustomerContext())
             {
-                CustomSessionObject.Current.SessionUsername = txtUsername.Text.Trim();
-                CustomSessionObject.Current.LoginStatus = true;
-
-                if (currentCustomer.UserName.Equals("admin"))
+                try
                 {
-                    CustomSessionObject.Current.IsAdmin = true;
-                    Server.Transfer("Admin.aspx");
+                    Customer currentCustomer = (from c in _db.Customers
+                                                where c.UserName == txtUsername.Text && c.CustomerPassword == txtPassword.Text
+                                                select c).First();
+
+                    if (currentCustomer.UserName == txtUsername.Text && currentCustomer.CustomerPassword == txtPassword.Text)
+                    {
+                        CustomSessionObject.Current.SessionUsername = txtUsername.Text.Trim();
+                        CustomSessionObject.Current.LoginStatus = true;
+                        Response.Redirect("LoggedIn.aspx", true);
+                    }
+                    else
+                    {
+                        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Unsuccessful')", true);
+                        CustomSessionObject.Current.LoginStatus = false;
+                    }
                 }
-                else
-                    Server.Transfer("LoggedIn.aspx");
-            }
-            else
-            {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Unsuccessful')", true);
-                CustomSessionObject.Current.LoginStatus = false;
+                catch (Exception ex)
+                {
+                    FireBugWriter.Write(ex.Message);
+                }
             }
         }
     }

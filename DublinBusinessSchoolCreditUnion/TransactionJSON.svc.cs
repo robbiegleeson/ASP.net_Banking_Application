@@ -18,9 +18,11 @@ namespace DublinBusinessSchoolCreditUnion
         [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare)]
         public List<Transaction> GetTransactions()
         {
-            var cxt = new CustomerContext();
-            List<Transaction> allTransactions = cxt.Transactions.ToList();
-            return allTransactions;
+            using (var cxt = new CustomerContext())
+            {
+                List<Transaction> allTransactions = cxt.Transactions.ToList();
+                return allTransactions;
+            }
         }
     }
 }

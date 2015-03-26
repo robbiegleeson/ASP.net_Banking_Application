@@ -17,25 +17,32 @@ namespace DublinBusinessSchoolCreditUnion
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            var _db = new CustomerContext();
-
-            User currentUser = (from u in _db.Users
-                                where u.UserName == txtUsername.Text && u.UserPassword == txtPassword.Text
-                                select u).First();
-
-            if (currentUser.UserName == txtUsername.Text && currentUser.UserPassword == txtPassword.Text)
+            using (var _db = new CustomerContext())
             {
-                CustomSessionObject.Current.SessionUsername = txtUsername.Text.Trim();
-                CustomSessionObject.Current.LoginStatus = true;
+                try
+                {
+                    User currentUser = (from u in _db.Users
+                                        where u.UserName == txtUsername.Text && u.UserPassword == txtPassword.Text
+                                        select u).First();
 
-                if (currentUser.UserName.Equals("admin"))
-                {
-                    CustomSessionObject.Current.IsAdmin = true;
-                    Server.Transfer("Admin.aspx");
+                    if (currentUser.UserName == txtUsername.Text && currentUser.UserPassword == txtPassword.Text)
+                    {
+                        CustomSessionObject.Current.SessionUsername = txtUsername.Text.Trim();
+                        CustomSessionObject.Current.LoginStatus = true;
+                        CustomSessionObject.Current.IsAdmin = true;
+                        Response.Redirect("Admin.aspx", true);
+                    }
+                    else
+                    {
+                        ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Login Unsuccessful')", true);
+                        CustomSessionObject.Current.LoginStatus = false;
+                        CustomSessionObject.Current.IsAdmin = false;
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    Server.Transfer("LoggedIn.aspx");
+                    FireBugWriter.Write(ex.Message);
+                    throw ex;
                 }
             }
         }

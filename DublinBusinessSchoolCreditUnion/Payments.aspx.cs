@@ -47,8 +47,7 @@ namespace DublinBusinessSchoolCreditUnion
             toAccount = int.Parse(txtToAccountNumber.Text);
             amount = int.Parse(txtAmount.Text);
 
-            try
-            {
+            
                 Transaction newTransaction = new Transaction();
                 newTransaction.TransactionAccountNumber = fromAccount;
                 newTransaction.DestinationAccountNumber = toAccount;
@@ -58,62 +57,69 @@ namespace DublinBusinessSchoolCreditUnion
                 newTransaction.TransactionDateTime = stamp;
                 newTransaction.TransactionDescription = description;
 
-                var _db = new CustomerContext();
+                using (var _db = new CustomerContext())
+                {
+                    try
+                    {
+                        _db.Transactions.Add(newTransaction);
+                        success = true;
+                        _db.SaveChanges();
+                    }
+                    catch (Exception ex)
+                    {
+                        FireBugWriter.Write(ex.Message);
+                        throw ex;
+                    }
+                }
 
-                _db.Transactions.Add(newTransaction);
-                success = true;
-                _db.SaveChanges();
-            }
-            catch(Exception ex)
-            {
-                throw ex;
-            }
 
-            try
-            {
-                var db = new CustomerContext();
-                int deductAmount = int.Parse(txtAmount.Text);
-                int accountNumber = int.Parse(txtAccountNumber.Text);
+                using (var db = new CustomerContext())
+                {
+                    int deductAmount = int.Parse(txtAmount.Text);
+                    int accountNumber = int.Parse(txtAccountNumber.Text);
+                    try
+                    {
+                        var query = (from a in db.Accounts
+                                     where a.AccountNumber == accountNumber
+                                     select a).First();
 
-                var query = (from a in db.Accounts
-                             where a.AccountNumber == accountNumber
-                             select a).First();
+                        int newBalance = query.Balance - deductAmount;
+                        query.Balance = newBalance;
+                        db.SaveChanges();
+                    }
+                    catch (Exception ex)
+                    {
+                        FireBugWriter.Write(ex.Message);
+                        throw;
+                    }
+                }
+                using (var db = new CustomerContext())
+                {
+                    int addAmount = int.Parse(txtAmount.Text);
+                    int destinationAccount = int.Parse(txtToAccountNumber.Text);
+                    try
+                    {
+                        var query = (from a in db.Accounts
+                                     where a.AccountNumber == destinationAccount
+                                     select a).First();
 
-                int newBalance = query.Balance - deductAmount;
-                query.Balance = newBalance;
-                db.SaveChanges();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            try
-            {
-                var db = new CustomerContext();
-                int addAmount = int.Parse(txtAmount.Text);
-                int destinationAccount = int.Parse(txtToAccountNumber.Text);
-
-                var query = (from a in db.Accounts
-                             where a.AccountNumber == destinationAccount
-                             select a).First();
-
-                int newBalance = query.Balance + addAmount;
-                query.Balance = newBalance;
-                db.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
-            if (success)
-            {
-                txtAmount.Text = string.Empty;
-                txtDescription.Text = string.Empty;
-                txtReference.Text = string.Empty;
-                txtToAccountNumber.Text = string.Empty;
-            }
+                        int newBalance = query.Balance + addAmount;
+                        query.Balance = newBalance;
+                        db.SaveChanges();
+                    }
+                    catch (Exception ex)
+                    {
+                        FireBugWriter.Write(ex.Message);
+                        throw ex;
+                    }
+                }
+                if (success)
+                {
+                    txtAmount.Text = string.Empty;
+                    txtDescription.Text = string.Empty;
+                    txtReference.Text = string.Empty;
+                    txtToAccountNumber.Text = string.Empty;
+                }
         }
 
 
@@ -122,19 +128,29 @@ namespace DublinBusinessSchoolCreditUnion
         {
             string username = CustomSessionObject.Current.SessionUsername;
 
-            var _db = new CustomerContext();
-            var query = (from c in _db.Customers
-                         join a in _db.Accounts on c.CustomerID equals a.CustomerID
-                         where c.UserName == username
-                         select new { a.AccountNumber }).FirstOrDefault();
+            using (var _db = new CustomerContext())
+            {
+                try
+                {
+                    var query = (from c in _db.Customers
+                                 join a in _db.Accounts on c.CustomerID equals a.CustomerID
+                                 where c.UserName == username
+                                 select new { a.AccountNumber }).FirstOrDefault();
 
-            txtAccountNumber.Text = query.AccountNumber.ToString();
-            txtExtAccountNumber.Text = query.AccountNumber.ToString();
+                    txtAccountNumber.Text = query.AccountNumber.ToString();
+                    txtExtAccountNumber.Text = query.AccountNumber.ToString();
+                }
+                catch (Exception ex)
+                {
+                    FireBugWriter.Write(ex.Message);
+                    throw ex;
+                }
+            }
         }
 
         protected void btnHome_Click(object sender, EventArgs e)
         {
-            Server.Transfer("LoggedIn.aspx");
+            Response.Redirect("LoggedIn.aspx", true);
         }
     }
 }

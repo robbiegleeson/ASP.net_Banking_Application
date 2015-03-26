@@ -31,6 +31,15 @@ namespace DublinBusinessSchoolCreditUnion {
         protected global::System.Web.UI.WebControls.TextBox txtAccountNumber;
         
         /// <summary>
+        /// RegularExpressionValidator4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator4;
+        
+        /// <summary>
         /// lblEmail control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace DublinBusinessSchoolCreditUnion {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
         /// lblUsername control.
@@ -67,6 +85,15 @@ namespace DublinBusinessSchoolCreditUnion {
         protected global::System.Web.UI.WebControls.TextBox txtUserName;
         
         /// <summary>
+        /// RegularExpressionValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator3;
+        
+        /// <summary>
         /// lblPassword control.
         /// </summary>
         /// <remarks>
@@ -83,6 +110,15 @@ namespace DublinBusinessSchoolCreditUnion {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
+        
+        /// <summary>
+        /// RegularExpressionValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
         
         /// <summary>
         /// btnRegister control.
