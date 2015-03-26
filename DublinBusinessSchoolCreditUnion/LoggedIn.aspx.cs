@@ -21,7 +21,7 @@ namespace DublinBusinessSchoolCreditUnion
 
             if (CustomSessionObject.Current.SessionUsername == null)
             {
-                Response.Redirect("Login.aspx");
+                Response.Redirect("ErrorPage.aspx", true);
             }
 
 
