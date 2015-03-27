@@ -66,6 +66,7 @@
                                     <asp:Label ID="lblToAccount" runat="server">To Account</asp:Label></li>
                                 <li>
                                     <asp:TextBox ID="txtToAccount" runat="server"></asp:TextBox></li>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Please enter a 8 digit Account Number" ControlToValidate="txtToAccount" ValidationExpression="^(?!\s*$)[0-9\s]{8}$" Display="Dynamic"></asp:RegularExpressionValidator>
                                 <li>
                                     <asp:Label ID="lblAmount" runat="server">Amount</asp:Label></li>
                                 <li>

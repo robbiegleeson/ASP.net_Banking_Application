@@ -51,7 +51,6 @@
                                         <li><a href="Default.aspx">Home</a></li>
                                         <li><a href="About.aspx">About</a></li>
                                         <li><a href="Branches.aspx">Branch Locator</a></li>
-                                        <li><a href="#">What We Offer</a></li>
                                         <li><a href="Contact.aspx">Contact</a></li>
                                     </ul>
                                     <ul class="nav navbar-nav navbar-right">
@@ -62,7 +61,7 @@
                                             <a href="Admin.aspx">
                                                 <asp:Label ID="lblAdmin" runat="server" Visible="false">Control Panel</asp:Label></a></li>
                                         <li>
-                                            <asp:LinkButton ID="LOGOUT" runat="server" OnClick="LOGOUT_Click" >Logout</asp:LinkButton></li>
+                                            <asp:LinkButton ID="LOGOUT" runat="server" OnClick="LOGOUT_Click">Logout</asp:LinkButton></li>
                                     </ul>
                                 </div>
                                 <!--/.nav-collapse -->
@@ -90,29 +89,22 @@
                                             <img src="images/twitter.png" /></a>
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="images/email.png" />
+                                        <a href="Contact.aspx">
+                                            <a href="Contact.aspx">
+                                            <img src="images/email.png" />
+                                            </a>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 col-xs-4">
-                                <h4>Contact Us</h4>
-
                                 <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <a href="#" class="btn btn-info btn-lg">
-                                            <span class="glyphicon glyphicon-phone-alt"></span>Phone
-                                        </a>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                        <a href="#" class="btn btn-info btn-lg">
-                                            <span class="glyphicon glyphicon-envelope"></span>E-Mail 
-                                        </a>
-                                    </div>
+                                    <h4>Disclaimer</h4>
+                                    <p>Dublin Business School Credit Union Limited is regulated by the Central Bank of Ireland and affiliated to the Irish League of Credit Unions. Click to access the Standard Rules for Credit Unions.</p>
                                     <div class="row">
                                         <div class="col-md-12 col-sm-12 col-xs-12">
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 col-xs-12">
-                                            <p id="center">&copy; <%:DateTime.Now.Year %> BIFFO &amp; MikeMaherMedia</p>
+                                            <p class="pcenter">This web site is for Educational Purposes Only</p>
+                                            <p class="pcenter">&copy; <%:DateTime.Now.Year %> BIFFO &amp; MikeMaherMedia</p>
                                         </div>
                                     </div>
                                 </div>

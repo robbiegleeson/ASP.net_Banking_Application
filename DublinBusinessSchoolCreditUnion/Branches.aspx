@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Find Us" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="Branches.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.Branches" %>
+﻿<%@ Page Title="DBSCU | Find Us" MetaKeywords="Credit Union, Internet Banking, Dublin Business School, Loans, Savings" MetaDescription="Dublin Business School has 4 branches located throughout Dublin City with our Head Office located in the City Center" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeBehind="Branches.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.Branches" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="Scripts/branchmap.js"></script>

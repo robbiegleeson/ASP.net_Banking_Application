@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/LoggedInMaster.master" AutoEventWireup="true" CodeBehind="LoanCalculator.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.LoanCalculator" %>
+﻿<%@ Page Title="DBSCU | Loan Calculator" MetaKeywords="Credit Union, Internet Banking, Dublin Business School, Loans, Savings" MetaDescription="Looking for a loan? Find out what you can afford, and when you can afford it." Language="C#" MasterPageFile="~/LoggedInMaster.master" AutoEventWireup="true" CodeBehind="LoanCalculator.aspx.cs" Inherits="DublinBusinessSchoolCreditUnion.LoanCalculator" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

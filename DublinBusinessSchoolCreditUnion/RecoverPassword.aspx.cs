@@ -39,25 +39,10 @@ namespace DublinBusinessSchoolCreditUnion
                         message.Body = "You have recieved this email because you have forgot your password." + Environment.NewLine +
                                        "Your password is " + password.CustomerPassword + Environment.NewLine +
                                        "Please login using this password";
-
-                        using (SmtpClient client = new SmtpClient())
-                        {
-                            client.UseDefaultCredentials = false;
-                            client.Host = "smtp.gmail.com";
-                            client.Port = 587;
-
-                            client.Credentials = new NetworkCredential(smtpUsername, smtpPassword);
-                            client.EnableSsl = true;
-                            try
-                            {
-                                client.Send(message);
-                            }
-                            catch (SmtpException ex)
-                            {
-                                FireBugWriter.Write(ex.Message);
-                            }
-                        }
                     }
+
+            
+                    
                 }
                 catch (Exception ex)
                 {
@@ -65,5 +50,6 @@ namespace DublinBusinessSchoolCreditUnion
                 }
             }
         }
+    
     }
 }
