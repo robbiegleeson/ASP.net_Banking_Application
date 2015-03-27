@@ -42,7 +42,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
         }

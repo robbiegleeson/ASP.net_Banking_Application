@@ -76,7 +76,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
         }
@@ -107,7 +106,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
         }
@@ -135,7 +133,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
         }
@@ -176,7 +173,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
 
@@ -204,7 +200,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
         }
@@ -231,7 +226,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
         }
@@ -257,7 +251,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
         }
@@ -276,7 +269,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
         }
@@ -296,7 +288,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
         }

@@ -67,7 +67,6 @@ namespace DublinBusinessSchoolCreditUnion
                     catch (Exception ex)
                     {
                         FireBugWriter.Write(ex.Message);
-                        throw;
                     }
                 }
             }
@@ -115,7 +114,6 @@ namespace DublinBusinessSchoolCreditUnion
                     catch (Exception ex)
                     {
                         FireBugWriter.Write(ex.Message);
-                        throw ex;
                     }
                 }
         }
@@ -137,7 +135,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
         }
@@ -162,7 +159,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
 
@@ -183,7 +179,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
             Response.Redirect(Request.RawUrl);
@@ -219,7 +214,6 @@ namespace DublinBusinessSchoolCreditUnion
                 catch (Exception ex)
                 {
                     FireBugWriter.Write(ex.Message);
-                    throw ex;
                 }
             }
         }
